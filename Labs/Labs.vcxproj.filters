@@ -27,9 +27,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="lib\sqlite3.c">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
     <ClCompile Include="code\1 sem\Lab9.cpp">
       <Filter>Файлы ресурсов\1 sem Programming</Filter>
     </ClCompile>
@@ -81,11 +78,9 @@
     <ClCompile Include="code\inform\myikoleshko.c">
       <Filter>Файлы ресурсов\inform</Filter>
     </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="lib\sqlite3.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
+    <ClCompile Include="lib\SQLite\sqlite3.c">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="code\inform\test.db">
@@ -94,5 +89,10 @@
     <None Include="code\inform\movies.db">
       <Filter>Файлы ресурсов\inform</Filter>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="lib\SQLite\sqlite3.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
