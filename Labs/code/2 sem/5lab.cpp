@@ -36,7 +36,7 @@
 //		}
 //	}
 //
-//	int* A = new int[m];
+//	int* A = new int[m / k];
 //	for (int i = 0; i < m; i++)
 //	{
 //		A[i] = rand() % 100;
