@@ -140,31 +140,31 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="11dz.c" />
-    <ClCompile Include="5lab.cpp" />
-    <ClCompile Include="8Lab.cpp" />
-    <ClCompile Include="9Lab.cpp" />
-    <ClCompile Include="EGE.cpp" />
-    <ClCompile Include="LAab7.cpp" />
-    <ClCompile Include="lab2 saod.cpp" />
-    <ClCompile Include="Lab3(2 sem).cpp" />
-    <ClCompile Include="Lab3__.cpp" />
-    <ClCompile Include="Lab5.cpp" />
-    <ClCompile Include="Lab6.cpp" />
-    <ClCompile Include="Lab7.cpp" />
-    <ClCompile Include="Lab8.cpp" />
-    <ClCompile Include="Lab9.cpp" />
-    <ClCompile Include="Labtesting.cpp" />
+    <ClCompile Include="code\1 sem\Lab3__.cpp" />
+    <ClCompile Include="code\1 sem\Lab5.cpp" />
+    <ClCompile Include="code\1 sem\Lab6.cpp" />
+    <ClCompile Include="code\1 sem\Lab7.cpp" />
+    <ClCompile Include="code\1 sem\Lab8.cpp" />
+    <ClCompile Include="code\1 sem\Lab9.cpp" />
+    <ClCompile Include="code\2 sem\5lab.cpp" />
+    <ClCompile Include="code\2 sem\8Lab.cpp" />
+    <ClCompile Include="code\2 sem\9Lab.cpp" />
+    <ClCompile Include="code\2 sem\LAab7.cpp" />
+    <ClCompile Include="code\2 sem\Lab3(2 sem).cpp" />
+    <ClCompile Include="code\inform\11dz.c" />
+    <ClCompile Include="code\inform\myikoleshko — копия.c" />
+    <ClCompile Include="code\inform\myikoleshko.c" />
+    <ClCompile Include="code\inform\test.c" />
+    <ClCompile Include="code\inform\test.cpp" />
+    <ClCompile Include="code\SAOD\lab2 saod.cpp" />
     <ClCompile Include="lib\sqlite3.c" />
-    <ClCompile Include="main.c" />
-    <ClCompile Include="myikoleshko — копия.c" />
-    <ClCompile Include="myikoleshko.c" />
-    <ClCompile Include="test.c" />
-    <ClCompile Include="test.cpp" />
-    <ClCompile Include="testing.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="lib\sqlite3.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="code\inform\movies.db" />
+    <None Include="code\inform\test.db" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

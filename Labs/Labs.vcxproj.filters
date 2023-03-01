@@ -13,87 +13,86 @@
       <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
       <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
-    <Filter Include="Файлы ресурсов\Lab 2 sem">
-      <UniqueIdentifier>{feb7fa58-185b-48d5-b26b-a04276f95803}</UniqueIdentifier>
+    <Filter Include="Файлы ресурсов\1 sem Programming">
+      <UniqueIdentifier>{46ee06ab-dfb0-416f-93df-b4df7aacf47a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы ресурсов\2 sem Programming">
+      <UniqueIdentifier>{e9c4f618-7559-4ad9-92e4-f97ea5945aab}</UniqueIdentifier>
     </Filter>
     <Filter Include="Файлы ресурсов\SAOD">
-      <UniqueIdentifier>{7fa1a002-30e3-476c-9b1d-de35c34942a0}</UniqueIdentifier>
+      <UniqueIdentifier>{633f59c2-c317-4b8f-98d8-b354ee457ee4}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Файлы ресурсов\Lab 1 sem">
-      <UniqueIdentifier>{68d7cd66-e0f8-45c1-9f50-3a0af37a6773}</UniqueIdentifier>
+    <Filter Include="Файлы ресурсов\inform">
+      <UniqueIdentifier>{e9baafc5-7194-4b52-903a-f6b4d3129b84}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="lib\sqlite3.c">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="testing.c">
-      <Filter>Файлы ресурсов</Filter>
+    <ClCompile Include="code\1 sem\Lab9.cpp">
+      <Filter>Файлы ресурсов\1 sem Programming</Filter>
     </ClCompile>
-    <ClCompile Include="Labtesting.cpp">
-      <Filter>Файлы ресурсов</Filter>
+    <ClCompile Include="code\1 sem\Lab3__.cpp">
+      <Filter>Файлы ресурсов\1 sem Programming</Filter>
     </ClCompile>
-    <ClCompile Include="main.c">
-      <Filter>Файлы ресурсов</Filter>
+    <ClCompile Include="code\1 sem\Lab5.cpp">
+      <Filter>Файлы ресурсов\1 sem Programming</Filter>
     </ClCompile>
-    <ClCompile Include="test.c">
-      <Filter>Файлы ресурсов</Filter>
+    <ClCompile Include="code\1 sem\Lab6.cpp">
+      <Filter>Файлы ресурсов\1 sem Programming</Filter>
     </ClCompile>
-    <ClCompile Include="EGE.cpp">
-      <Filter>Файлы ресурсов</Filter>
+    <ClCompile Include="code\1 sem\Lab7.cpp">
+      <Filter>Файлы ресурсов\1 sem Programming</Filter>
     </ClCompile>
-    <ClCompile Include="myikoleshko.c">
-      <Filter>Файлы ресурсов</Filter>
+    <ClCompile Include="code\1 sem\Lab8.cpp">
+      <Filter>Файлы ресурсов\1 sem Programming</Filter>
     </ClCompile>
-    <ClCompile Include="11dz.c">
-      <Filter>Файлы ресурсов</Filter>
+    <ClCompile Include="code\2 sem\9Lab.cpp">
+      <Filter>Файлы ресурсов\2 sem Programming</Filter>
     </ClCompile>
-    <ClCompile Include="myikoleshko — копия.c">
-      <Filter>Файлы ресурсов</Filter>
+    <ClCompile Include="code\2 sem\LAab7.cpp">
+      <Filter>Файлы ресурсов\2 sem Programming</Filter>
     </ClCompile>
-    <ClCompile Include="test.cpp">
-      <Filter>Файлы ресурсов</Filter>
+    <ClCompile Include="code\2 sem\Lab3(2 sem).cpp">
+      <Filter>Файлы ресурсов\2 sem Programming</Filter>
     </ClCompile>
-    <ClCompile Include="Lab3(2 sem).cpp">
-      <Filter>Файлы ресурсов\Lab 2 sem</Filter>
+    <ClCompile Include="code\2 sem\5lab.cpp">
+      <Filter>Файлы ресурсов\2 sem Programming</Filter>
     </ClCompile>
-    <ClCompile Include="Lab9.cpp">
-      <Filter>Файлы ресурсов\Lab 1 sem</Filter>
+    <ClCompile Include="code\2 sem\8Lab.cpp">
+      <Filter>Файлы ресурсов\2 sem Programming</Filter>
     </ClCompile>
-    <ClCompile Include="Lab3__.cpp">
-      <Filter>Файлы ресурсов\Lab 1 sem</Filter>
-    </ClCompile>
-    <ClCompile Include="Lab5.cpp">
-      <Filter>Файлы ресурсов\Lab 1 sem</Filter>
-    </ClCompile>
-    <ClCompile Include="Lab6.cpp">
-      <Filter>Файлы ресурсов\Lab 1 sem</Filter>
-    </ClCompile>
-    <ClCompile Include="Lab7.cpp">
-      <Filter>Файлы ресурсов\Lab 1 sem</Filter>
-    </ClCompile>
-    <ClCompile Include="Lab8.cpp">
-      <Filter>Файлы ресурсов\Lab 1 sem</Filter>
-    </ClCompile>
-    <ClCompile Include="5lab.cpp">
-      <Filter>Файлы ресурсов\Lab 2 sem</Filter>
-    </ClCompile>
-    <ClCompile Include="LAab7.cpp">
-      <Filter>Файлы ресурсов\Lab 2 sem</Filter>
-    </ClCompile>
-    <ClCompile Include="lab2 saod.cpp">
+    <ClCompile Include="code\SAOD\lab2 saod.cpp">
       <Filter>Файлы ресурсов\SAOD</Filter>
     </ClCompile>
-    <ClCompile Include="9Lab.cpp">
-      <Filter>Файлы ресурсов\Lab 2 sem</Filter>
+    <ClCompile Include="code\inform\test.c">
+      <Filter>Файлы ресурсов\inform</Filter>
     </ClCompile>
-    <ClCompile Include="8Lab.cpp">
-      <Filter>Файлы ресурсов\Lab 2 sem</Filter>
+    <ClCompile Include="code\inform\test.cpp">
+      <Filter>Файлы ресурсов\inform</Filter>
+    </ClCompile>
+    <ClCompile Include="code\inform\11dz.c">
+      <Filter>Файлы ресурсов\inform</Filter>
+    </ClCompile>
+    <ClCompile Include="code\inform\myikoleshko — копия.c">
+      <Filter>Файлы ресурсов\inform</Filter>
+    </ClCompile>
+    <ClCompile Include="code\inform\myikoleshko.c">
+      <Filter>Файлы ресурсов\inform</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="lib\sqlite3.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="code\inform\test.db">
+      <Filter>Файлы ресурсов\inform</Filter>
+    </None>
+    <None Include="code\inform\movies.db">
+      <Filter>Файлы ресурсов\inform</Filter>
+    </None>
   </ItemGroup>
 </Project>
