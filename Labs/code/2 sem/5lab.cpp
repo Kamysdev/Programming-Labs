@@ -62,39 +62,39 @@
 //}
 
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
-
-int main()
-{
-	int b, flag = 1, count = 0;
-
-	printf("Enter Arr size: ");
-	scanf_s("%d", &b);
-
-	int** A = new  int* [b];
-	for (int i = 0; i < b; i++)
-	{
-		A[i] = new  int [b];
-
-		for (int j = 0; j < b; j++)
-		{
-			A[i][j] = (j + 1) * (i + 1);
-			count++;
-			if (count <= flag)
-			{
-				printf("%d ", A[i][j]);
-			}
-			else
-			{
-				j = b;
-				count = 0;
-			}
-		}
-		flag++;
-		printf("\n");
-	}
-
-	return 0;
-}
+//#include <stdio.h>
+//#include <stdlib.h>
+//#include <time.h>
+//
+//int main()
+//{
+//	int b, flag = 1, count = 0;
+//
+//	printf("Enter Arr size: ");
+//	scanf_s("%d", &b);
+//
+//	int** A = new  int* [b];
+//	for (int i = 0; i < b; i++)
+//	{
+//		A[i] = new  int [b];
+//
+//		for (int j = 0; j < b; j++)
+//		{
+//			A[i][j] = (j + 1) * (i + 1);
+//			count++;
+//			if (count <= flag)
+//			{
+//				printf("%d ", A[i][j]);
+//			}
+//			else
+//			{
+//				j = b;
+//				count = 0;
+//			}
+//		}
+//		flag++;
+//		printf("\n");
+//	}
+//
+//	return 0;
+//}
