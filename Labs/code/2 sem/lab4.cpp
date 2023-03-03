@@ -93,93 +93,93 @@
 // 
 // 
 // 
-int summa(int** arr, int size, int j)
-{
-	size--;
-	int sum = 0;
-
-	for (int i = 0; i < size + 1; i++)
-	{
-		sum += arr[i][j];
-	}
-
-	return sum;
-}
-
-void add_sum(int** matrix, int m, int n)
-{
-	int sum = 0;
-	int** matrixb = new int* [m + 1];
-	for (int i = 0; i < m + 1; i++)
-	{
-		matrixb[i] = new int[n + 1];
-
-	}
-
-	for (int i = 0; i < m + 1; i++)
-	{
-		for (int j = 0; j < n + 1; j++)
-		{
-			matrixb[m][n] = 0;
-			if ((j < n) && (i < m))
-			{
-				matrixb[i][j] = matrix[i][j];
-				sum += matrixb[i][j];
-			}
-			if ((j == n) && (i < m))
-			{
-				matrixb[i][j] = sum;
-				sum = 0;
-			}
-			if ((i == m) && (j != n))
-			{
-				matrixb[i][j] = summa(matrix, m, j);
-			}
-
-			if ((i != m) || (j != n))
-			{
-				printf("%d\t", matrixb[i][j]);
-			}
-			
-		}
-
-
-		printf("\n");
-	}
-
-}
-
-int main()
-{
-	int m, n;
-
-	printf("Enter amount of lines, then amount of rows \n");
-	srand(time(NULL));
-	scanf_s("%d", &m);
-	scanf_s("%d", &n);
-	printf("\n");
-
-	int** matrix = new int* [m];
-
-	for (int i = 0; i < n; i++)
-	{
-		matrix[i] = new int[n];
-	}
-
-	for (int i = 0; i < m; i++)
-	{
-		for (int j = 0; j < n; j++)
-		{
-			matrix[i][j] = rand() % 100;
-			printf("%d\t", matrix[i][j]);
-		} 
-
-		printf("\n");
-	}
-
-	printf("\n");
-	add_sum(matrix, m, n);
-
-	matrix = NULL;
-	return 0; 
-}
+//int summa(int** arr, int size, int j)
+//{
+//	size--;
+//	int sum = 0;
+//
+//	for (int i = 0; i < size + 1; i++)
+//	{
+//		sum += arr[i][j];
+//	}
+//
+//	return sum;
+//}
+//
+//void add_sum(int** matrix, int m, int n)
+//{
+//	int sum = 0;
+//	int** matrixb = new int* [m + 1];
+//	for (int i = 0; i < m + 1; i++)
+//	{
+//		matrixb[i] = new int[n + 1];
+//
+//	}
+//
+//	for (int i = 0; i < m + 1; i++)
+//	{
+//		for (int j = 0; j < n + 1; j++)
+//		{
+//			matrixb[m][n] = 0;
+//			if ((j < n) && (i < m))
+//			{
+//				matrixb[i][j] = matrix[i][j];
+//				sum += matrixb[i][j];
+//			}
+//			if ((j == n) && (i < m))
+//			{
+//				matrixb[i][j] = sum;
+//				sum = 0;
+//			}
+//			if ((i == m) && (j != n))
+//			{
+//				matrixb[i][j] = summa(matrix, m, j);
+//			}
+//
+//			if ((i != m) || (j != n))
+//			{
+//				printf("%d\t", matrixb[i][j]);
+//			}
+//			
+//		}
+//
+//
+//		printf("\n");
+//	}
+//
+//}
+//
+//int main()
+//{
+//	int m, n;
+//
+//	printf("Enter amount of lines, then amount of rows \n");
+//	srand(time(NULL));
+//	scanf_s("%d", &m);
+//	scanf_s("%d", &n);
+//	printf("\n");
+//
+//	int** matrix = new int* [m];
+//
+//	for (int i = 0; i < n; i++)
+//	{
+//		matrix[i] = new int[n];
+//	}
+//
+//	for (int i = 0; i < m; i++)
+//	{
+//		for (int j = 0; j < n; j++)
+//		{
+//			matrix[i][j] = rand() % 100;
+//			printf("%d\t", matrix[i][j]);
+//		} 
+//
+//		printf("\n");
+//	}
+//
+//	printf("\n");
+//	add_sum(matrix, m, n);
+//
+//	matrix = NULL;
+//	return 0; 
+//}

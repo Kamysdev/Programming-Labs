@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 
-//int reset(int *arr, int size) 
+//int reset(int *arr, int size)
 //{
 //	int min1 = 101, min2 = 101, temp1 = -1, temp2 = -2;
 //
