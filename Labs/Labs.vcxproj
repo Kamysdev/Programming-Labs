@@ -157,7 +157,6 @@
     <ClCompile Include="code\inform\test.c" />
     <ClCompile Include="code\inform\test.cpp" />
     <ClCompile Include="code\SAOD\lab2 saod.cpp" />
-    <ClCompile Include="D:\Загрузки\Lab5.cpp" />
     <ClCompile Include="lib\SQLite\sqlite3.c" />
   </ItemGroup>
   <ItemGroup>

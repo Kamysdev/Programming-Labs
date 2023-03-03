@@ -2,18 +2,6 @@
 #include <stdlib.h>
 #include <time.h>
 
-//int GeneredArrA(int *arr, int &count, int size)
-//{
-//	if (count == size)
-//	{
-//		count = 0;
-//	}
-//	int element = arr[count];
-//	count++;
-//
-//	return element;
-//}
-
 int main()
 {
 	int m, k, flag = 0, count = 0;
