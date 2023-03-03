@@ -159,14 +159,10 @@
     <ClCompile Include="code\inform\test.c" />
     <ClCompile Include="code\inform\test.cpp" />
     <ClCompile Include="code\SAOD\lab2 saod.cpp" />
-    <ClCompile Include="lib\SQLite\sqlite3.c" />
   </ItemGroup>
   <ItemGroup>
     <None Include="code\inform\movies.db" />
     <None Include="code\inform\test.db" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="lib\SQLite\sqlite3.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
