@@ -77,30 +77,30 @@
 
 
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
-
-int main()
-{
-	int b, flag = 1, count = 0;
-
-	printf("Enter Arr size: ");
-	scanf_s("%d", &b);
-
-	int** A = new  int* [b];
-	for (int i = 0; i < b; i++)
-	{
-		A[i] = new  int [i + 1];
-
-		for (int j = 0; j < i + 1; j++)
-		{
-			A[i][j] = (j + 1) * (i + 1);
-		
-			printf("%d ", A[i][j]);
-		}
-		printf("\n");
-	}
-
-	return 0;
-}
+//#include <stdio.h>
+//#include <stdlib.h>
+//#include <time.h>
+//
+//int main()
+//{
+//	int b, flag = 1, count = 0;
+//
+//	printf("Enter Arr size: ");
+//	scanf_s("%d", &b);
+//
+//	int** A = new  int* [b];
+//	for (int i = 0; i < b; i++)
+//	{
+//		A[i] = new  int [i + 1];
+//
+//		for (int j = 0; j < i + 1; j++)
+//		{
+//			A[i][j] = (j + 1) * (i + 1);
+//		
+//			printf("%d ", A[i][j]);
+//		}
+//		printf("\n");
+//	}
+//
+//	return 0;
+//}
