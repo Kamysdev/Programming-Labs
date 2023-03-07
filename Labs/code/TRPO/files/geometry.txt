@@ -1,0 +1,18 @@
+circle)1 -21.42, 1)
+circle(1x 2.4, 123.123)
+circle(123 123, 123)
+cirsle(1.213 2,232)
+circle(--1 0, 1.5)
+circle(-1 0, 1.5)
+circle(2-7 0, 1.5)
+circle(-1 -5-6, 1.5)
+circle(-1-5, 1.5)
+circle(-1 -5 , 1.5)
+circle(-1 --5 , 1.5)
+circle(-1 --5, 1.5)
+circle(1..23, 123, 1)
+circle(1 2, 3(
+circle(1 2, 4) asd
+circle(1 2,, 4)
+circle(1 2..0, 4)
+circle(0 0, 1.5)

@@ -2,10 +2,10 @@
 //#include <stdio.h>
 //
 //typedef struct
-//{
+//{ 
 //	int school_numb;
 //	int graduates;
-//	int received;
+//	int received; 
 //	float percent;
 //} school;
 //

@@ -25,6 +25,12 @@
     <Filter Include="Файлы ресурсов\inform">
       <UniqueIdentifier>{e9baafc5-7194-4b52-903a-f6b4d3129b84}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Файлы ресурсов\TRPO">
+      <UniqueIdentifier>{e4c06f6e-30bc-4346-bd9d-2e23af767dad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы ресурсов\TRPO\files">
+      <UniqueIdentifier>{2d9b346c-260d-444c-be6d-bc53789092d2}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="code\1 sem\Lab9.cpp">
@@ -81,6 +87,9 @@
     <ClCompile Include="code\2 sem\lab4.cpp">
       <Filter>Файлы ресурсов\2 sem Programming</Filter>
     </ClCompile>
+    <ClCompile Include="code\TRPO\geometry.c">
+      <Filter>Файлы ресурсов\TRPO</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="code\inform\test.db">
@@ -89,5 +98,10 @@
     <None Include="code\inform\movies.db">
       <Filter>Файлы ресурсов\inform</Filter>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="code\TRPO\files\geometry.txt">
+      <Filter>Файлы ресурсов\TRPO\files</Filter>
+    </Text>
   </ItemGroup>
 </Project>
