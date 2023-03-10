@@ -1,11 +1,12 @@
-﻿//#include <stdlib.h>
-//#include <stdio.h>
-//#include <iostream>
-//#include <math.h>
-//using namespace std;
-//
-///*
-////1
+﻿#include <stdlib.h>
+#include <stdio.h>
+#include <iostream>
+#include <math.h>
+using namespace std;
+
+
+//1
+
 //void calculate_triangle(int a_side, int b_side, int c_side, int *perim, int *square, int *flag)
 //{
 //	if (((a_side + b_side > c_side) && (a_side + c_side > b_side) && (b_side + c_side > a_side)) && ((a_side > 0) && (b_side > 0) && (c_side > 0)))
@@ -15,7 +16,7 @@
 //	}
 //	else
 //	{
-//		printf("Eblan");
+//		printf("You're not smart person as I can see");
 //		*flag = 0;
 //	}
 //}
@@ -38,10 +39,11 @@
 //	{
 //		return 0;
 //	}
-//}*/
-//
-////2
-//
+//}
+
+//2
+
+
 //long double fact(int N)
 //{
 //	if (N < 0)
@@ -59,29 +61,29 @@
 //	} 
 //}
 //
-//void decide_who(float p, float q, int n, int m, long double *girl_chances, long double *boy_chances)
+//void decide_who(float p, float q, int n, int m, float &girl_chances, float &boy_chances)
 //{
 //
-//	*girl_chances = (fact(n) / (fact(m) * (fact(n) - fact(m))) * pow(p, m) * pow(q, n-m));
-//	*boy_chances = (fact(n) / (fact(m) * (fact(n) - fact(m))) * pow(q, m) * pow(p, n - m));
+//	girl_chances = (fact(n) / (fact(m) * (fact(n) - fact(m))) * pow(p, m) * pow(q, n-m));
+//	boy_chances = (fact(n) / (fact(m) * (fact(n) - fact(m))) * pow(q, m) * pow(p, n - m));
 //}
 //
 //
 //int main()
 //{
-//	long double p = 0.45, q = 1 - p, girl_chances, boy_chances;
+//	float p = 0.45, q = 1 - p, girl_chances, boy_chances;
 //	int n, m;
 //
-//	cout << "Enter children amount " << endl;
-//	cin >> n;
+//	cout << "Enter variables " << endl;
+//	cin >> n >> m;
 //	if (n <= 0)
 //	{
-//		cout << "Eblan";
+//		cout << "You're not smart person as I can see.";
 //		return -1;
 //	}
 //	else
 //	{
-//		decide_who(p, q, n, m, &girl_chances, &boy_chances);
+//		decide_who(p, q, n, m, girl_chances, boy_chances);
 //	}
 //
 //	cout << "Girl chances are " << girl_chances << endl;
