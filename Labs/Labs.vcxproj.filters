@@ -87,6 +87,9 @@
     <ClCompile Include="code\SAOD\saod5true.cpp">
       <Filter>Файлы ресурсов\SAOD</Filter>
     </ClCompile>
+    <ClCompile Include="code\2 sem\Lab_6_Prog.cpp">
+      <Filter>Файлы ресурсов\2 sem Programming</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="code\inform\test.db">
