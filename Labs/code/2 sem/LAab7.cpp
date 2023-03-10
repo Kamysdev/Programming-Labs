@@ -2,93 +2,79 @@
 #include <stdlib.h>
 #include <time.h>
 
-//int reset(int *arr, int size)
-//{
-//	int min1 = 101, min2 = 101, temp1 = -1, temp2 = -2;
-//
-//	for (int i = 0; i < size; i++)
-//	{
-//		if ((min1 >= arr[i]) && (i != temp2))
-//		{
-//			min1 = arr[i];
-//			temp1 = i;
-//		}
-//		if ((min2 >= arr[i]) && (i != temp1))
-//		{
-//			min2 = arr[i];
-//			temp2 = i;
-//		}
-//	}
-//
-//	if (temp1 > temp2)
-//	{
-//		min1 = temp1;
-//		temp1 = temp2;
-//		temp2 = min1;
-//	}
-//
-//	for (int i = temp1 + 1; i < temp2; i++)
-//	{
-//		arr[i] = 0;
-//	}
-//
-//	return *arr;
-//}
-//
-//int main()
-//{
-//	int *arr, n;
-//	srand(time(NULL));
-//
-//	scanf_s("%d", &n);
-//	arr = new int[n];
-//	for (int i = 0; i < n; i++)
-//	{
-//		arr[i] = rand() % 100;
-//		printf("%d ", arr[i]);
-//	} 
-//
-//	reset(arr, n);
-//
-//	printf("\n");
-//	for (int i = 0; i < n; i++)
-//	{
-//		printf("%d ", arr[i]);
-//	}
-//
-//	return 0;
-//}
+int reset(int *arr, int size)
+{
+	int min1 = 101, min2 = 101, temp1 = -1, temp2 = -2;
+
+	for (int i = 0; i < size; i++)
+	{
+		if ((min1 >= arr[i]) && (i != temp2))
+		{
+			min1 = arr[i];
+			temp1 = i;
+		}
+		if ((min2 >= arr[i]) && (i != temp1))
+		{
+			min2 = arr[i];
+			temp2 = i;
+		}
+	}
+
+	if (temp1 >= temp2)
+	{
+		min1 = temp1;
+		temp1 = temp2;
+		temp2 = min1;
+	}
+
+	for (int i = temp1 + 1; i < temp2; i++)
+	{
+		arr[i] = 0;
+	}
+
+	return *arr;
+}
+
+int main()
+{
+	int *arr, n;
+	srand(time(NULL));
+
+	scanf_s("%d", &n);
+	arr = new int[n];
+	for (int i = 0; i < n; i++)
+	{
+		arr[i] = rand() % 100;
+		printf("%d ", arr[i]);
+	} 
+
+	reset(arr, n);
+
+	printf("\n");
+	for (int i = 0; i < n; i++)
+	{
+		printf("%d ", arr[i]);
+	}
+
+	return 0;
+}
 
 
-//int RandLong()
-//{
-//	char flag = 1, size;
-//	while (flag)
-//	{
-//		size = rand() % 10;
-//		if ((size >= 2) && (size <= 10))
-//		{
-//			flag = false;
-//		}
-//	}
-//
-//	return size;
-//}
-//
 //int main()
 //{
 //	int **arr, n, sum; 
 //	srand(time(NULL));
-//	n = RandLong();
+//	n = rand() % 8 + 2;
 //
 //	arr = new  int* [n];
 //	for (int i = 0; i < n; i++)
 //	{
-//		arr[i] = new  int[n];
-//		arr[i][0] = n;
+//		int size = rand() % 8 + 2;
+//		arr[i] = new  int[size];
+//		arr[i][0] = size;
 //		sum = 0;											// Изменить в случае, если длинну строки, указанную в 0 элементе, нужно также считать в сумме
 //		printf("%d ", arr[i][0]);
-//		for (int j = 1; j < n; j++)
+//		for (int j = 1; j < size + 1; j++)
 //		{
 //			arr[i][j] = rand() % 100;
 //			printf("%d ", arr[i][j]);

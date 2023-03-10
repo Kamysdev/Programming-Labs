@@ -4,9 +4,8 @@
 #include <math.h>
 using namespace std;
 
-
-//1
 /*
+//1
 void calculate_triangle(int a_side, int b_side, int c_side, int *perim, int *square, int *flag)
 {
 	if (((a_side + b_side > c_side) && (a_side + c_side > b_side) && (b_side + c_side > a_side)) && ((a_side > 0) && (b_side > 0) && (c_side > 0)))
@@ -43,7 +42,6 @@ int main()
 
 //2
 
-
 long double fact(int N)
 {
 	if (N < 0)
@@ -61,11 +59,11 @@ long double fact(int N)
 	} 
 }
 
-void decide_who(float p, float q, int n, int m, float &girl_chances, float &boy_chances)
+void decide_who(float p, float q, int n, int m, float *girl_chances, float *boy_chances)
 {
 
-	girl_chances = (fact(n) / (fact(m) * (fact(n) - fact(m))) * pow(p, m) * pow(q, n-m));
-	boy_chances = (fact(n) / (fact(m) * (fact(n) - fact(m))) * pow(q, m) * pow(p, n - m));
+	*girl_chances = (fact(n) / (fact(m) * (fact(n) - fact(m))) * pow(p, m) * pow(q, n-m));
+	*boy_chances = (fact(n) / (fact(m) * (fact(n) - fact(m))) * pow(q, m) * pow(p, n - m));
 }
 
 
@@ -83,7 +81,7 @@ int main()
 	}
 	else
 	{
-		decide_who(p, q, n, m, girl_chances, boy_chances);
+		decide_who(p, q, n, m, &girl_chances, &boy_chances);
 	}
 
 	cout << "Girl chances are " << girl_chances << endl;
