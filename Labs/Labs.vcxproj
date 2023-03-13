@@ -161,6 +161,7 @@
     <ClCompile Include="code\inform\test.c" />
     <ClCompile Include="code\inform\test.cpp" />
     <ClCompile Include="code\SAOD\lab2 saod.cpp" />
+    <ClCompile Include="code\SAOD\Lab6.cpp" />
     <ClCompile Include="code\SAOD\saod5true.cpp" />
   </ItemGroup>
   <ItemGroup>
