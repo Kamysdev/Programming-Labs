@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#include <locale.h>
+#include <locale>
 #include <math.h>
 
 using namespace std;
@@ -85,7 +85,7 @@ void shellSort(int* array, int size, int &flag1, int &flag2)
 
 int main()
 {
-    
+    setlocale(LC_ALL, "Russian");
 	double kkk = 0;
     int *arr, N, C, M;
     N = 100;
@@ -96,20 +96,20 @@ int main()
 
     FillRand(arr, N);
     PrintMas(arr, N);
-    printf("\nКонтрольная сумма : %d", CheckSum(arr, N));
-	printf("\nКол-во серий : %d", RunNumber(arr, N));
+    printf("\nKontrolnaya summa: %d", CheckSum(arr, N));
+	printf("\nSeriya: %d", RunNumber(arr, N));
     
     printf("\n\n");
 
     insertionSort(arr, N, C, M);
     PrintMas(arr, N);
-    printf("\nКонтрольная сумма : %d", CheckSum(arr, N));
-	printf("\nКол-во серий : %d", RunNumber(arr, N));
+    printf("\nKontrolnaya summa: %d", CheckSum(arr, N));
+	printf("\nSeriya: %d", RunNumber(arr, N));
     printf("\n\n");
 
 
     printf("-------------------------------------------------------------------------------------------------------------\n");
-    printf("|   n   |\tКол-во К-сортировок\t\t|\t\Insert Мф + Сф  \t|\tShell Мф + Сф\t    |");
+    printf("|   n   |\tKol-vo K-sortirovok\t\t|\t\Insert Mf + Cf\t\t|\tShell Mf + Cf\t    |");
     printf("\n");
     printf("-------------------------------------------------------------------------------------------------------------\n");
     
