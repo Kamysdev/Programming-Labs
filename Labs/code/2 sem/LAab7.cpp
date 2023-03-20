@@ -1,6 +1,6 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
+//#include <stdio.h>
+//#include <stdlib.h>
+//#include <time.h>
 
 //int reset(int *arr, int size)
 //{
