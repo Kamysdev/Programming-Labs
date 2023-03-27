@@ -1,67 +1,135 @@
 #include <iostream>
+#include <string>
+#include <functional>
+
+#define TT template<typename T>
+
 using namespace std;
 
-struct phone_book
+struct cellphone_book
 {
-	string name;
-	string surname;
-	string adress;
-	double phone_number;
+    string name;
+    string surname;
+    string adress;
+    long int number;
 };
 
-int BSearch2(int* arr, int size, int x) 
+void swapt(int& a, int& b)
 {
-    &flag = 0;
-    int L = 1;
-    int R = size;
-
-    while (L < R) 
-    {
-        &flag += 1;
-        int m = (L + R) / 2;
-        if (arr[m - 1] < x) 
-        {
-            L = m + 1;
-        }
-        else R = m;
-    }
-
-    if (arr[R - 1] == x) 
-    {
-        &flag += 1;
-    }
-    return &flag;
+    int temp = a;
+    a = b;
+    b = temp;
 }
 
-//void insertionSort(int *array, int size)
-//{
-//    for (int step = 1; step < size; step++)
-//    {
-//        int key = array[step];
-//        int j = step - 1;
-//        while (key < array[j] && j >= 0)
-//        {
-//            array[j + 1] = array[j];
-//            --j;
-//        }
-//        array[j + 1] = key;
-//    }
-//}
+void printArray(cellphone_book* arr, int* index)
+{
+    for (int i = 0; i < 4; i++)
+    {
+        cout << arr[index[i]].name << " "
+            << arr[index[i]].surname << " "
+            << arr[index[i]].adress << " "
+            << arr[index[i]].number << endl;
+    }
+}
+
+void selectSortName(cellphone_book* array, int* index)
+{
+    int size = 4;
+    for (int step = 0; step < size - 1; step++)
+    {
+        int min_idx = step;
+
+        for (int i = step + 1; i < size; i++)
+        {
+            if (array[index[i]].name < array[index[min_idx]].name)
+                min_idx = i;
+        }
+
+        swapt(index[min_idx], index[step]);
+    }
+}
+
+void selectSortNumber(cellphone_book* array, int* index)
+{
+    int size = 4;
+    for (int step = 0; step < size - 1; step++)
+    {
+        int min_idx = step;
+
+        for (int i = step + 1; i < size; i++)
+        {
+            if (array[index[i]].number < array[index[min_idx]].number)
+                min_idx = i;
+        }
+
+        swapt(index[min_idx], index[step]);
+    }
+}
+
+
+TT void selectSortUn(cellphone_book* array, int* index, function<T(cellphone_book)> getField)
+{
+    int size = 4;
+    for (int step = 0; step < size - 1; step++)
+    {
+        int min_idx = step;
+
+        for (int i = step + 1; i < size; i++)
+        {
+            if (getField(array[index[i]]) < getField(array[index[min_idx]]))
+                min_idx = i;
+        }
+
+        swapt(index[min_idx], index[step]);
+    }
+}
 
 int main()
 {
-	phone_book arr[4] = { {"David", "Davidson", "Moscow, Arbat street 16", 84925553535},
-						{"Bob", "Stone", "Chimki, Youbeleyniy prospect 16", 849523358},
-						{"Kelvin", "Joyner", "Togliatti, Dzerjisky street 11", 89879302800},
-						{"Capybara", "Capybara", "Novosibirsk, Tymyryazeva street 71/1", 83833887258}};
 
-	
-    int ind_arr_namesort[4], ind_arr_adressort[4], flag;
+    cellphone_book arr[4] =
+    {
+                                  {"Yang", "Xiao Long", "Vale, Beer str 15/2", 9879335752},
+                                  {"Igor", "Sirotkin", "Voshod", 9993322332},
+                                  {"Stepan", "Bebralovskiy", "Berdsk, Morskaya str 16/2", 8005553535},
+                                  {"Ronald", "Mc'Donald", "Ohaio", 3333332332}
+    };
+
+    int arr1[4] = { 0, 1, 2, 3 },
+        arr2[4] = { 0, 1, 2, 3 };
+
+    //selectionSortName(arr, arr1);
+
+    selectSortUn<string>(arr, arr1, [](cellphone_book d)
+        {
+            return d.name;
+        });
+
+    cout << endl;
+
+    printArray(arr, arr1);
 
     for (int i = 0; i < 4; i++)
     {
-        ind_arr_namesort[4] = BSearch2()
+        cout << arr1[i] << " ";
     }
 
-	return 0;
+    selectSortUn<long int>(arr, arr2, [](cellphone_book d)
+        {
+            return d.number;
+        });
+    // selectionSortNumber(arr, arr2);
+
+    cout << endl;
+
+    printArray(arr, arr2);
+
+    for (int i = 0; i < 4; i++)
+    {
+        cout << arr2[i] << " ";
+    }
+
+    cout << endl << endl;
+
+    return 0;
 }
