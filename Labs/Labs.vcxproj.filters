@@ -110,5 +110,6 @@
     <None Include="code\inform\movies.db">
       <Filter>Файлы ресурсов\inform</Filter>
     </None>
+    <None Include="packages.config" />
   </ItemGroup>
 </Project>
