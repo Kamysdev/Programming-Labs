@@ -161,10 +161,10 @@
     <ClCompile Include="code\inform\test.c" />
     <ClCompile Include="code\inform\test.cpp" />
     <ClCompile Include="code\SAOD\lab2 saod.cpp" />
-    <ClCompile Include="code\SAOD\Lab6.cpp" />
-    <ClCompile Include="code\SAOD\Lab7.cpp" />
+    <ClCompile Include="code\SAOD\Lab6saod.cpp" />
+    <ClCompile Include="code\SAOD\Lab7sa.cpp" />
     <ClCompile Include="code\SAOD\Lab7SAOD.cpp" />
-    <ClCompile Include="code\SAOD\Lab8.cpp" />
+    <ClCompile Include="code\SAOD\Lab8saod.cpp" />
     <ClCompile Include="code\SAOD\saod5true.cpp" />
   </ItemGroup>
   <ItemGroup>

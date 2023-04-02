@@ -90,16 +90,16 @@
     <ClCompile Include="code\2 sem\Lab_6_Prog.cpp">
       <Filter>Файлы ресурсов\2 sem Programming</Filter>
     </ClCompile>
-    <ClCompile Include="code\SAOD\Lab6.cpp">
+    <ClCompile Include="code\SAOD\Lab6saod.cpp">
       <Filter>Файлы ресурсов\SAOD</Filter>
     </ClCompile>
     <ClCompile Include="code\SAOD\Lab7SAOD.cpp">
       <Filter>Файлы ресурсов\SAOD</Filter>
     </ClCompile>
-    <ClCompile Include="code\SAOD\Lab7.cpp">
+    <ClCompile Include="code\SAOD\Lab7sa.cpp">
       <Filter>Файлы ресурсов\SAOD</Filter>
     </ClCompile>
-    <ClCompile Include="code\SAOD\Lab8.cpp">
+    <ClCompile Include="code\SAOD\Lab8saod.cpp">
       <Filter>Файлы ресурсов\SAOD</Filter>
     </ClCompile>
   </ItemGroup>
