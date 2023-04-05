@@ -117,7 +117,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <LanguageStandard_C>stdc11</LanguageStandard_C>
       <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
@@ -166,6 +166,7 @@
     <ClCompile Include="code\SAOD\Lab7SAOD.cpp" />
     <ClCompile Include="code\SAOD\Lab8saod.cpp" />
     <ClCompile Include="code\SAOD\saod5true.cpp" />
+    <ClCompile Include="code\Testing\SDL2.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="code\inform\movies.db" />
