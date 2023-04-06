@@ -1,108 +1,94 @@
 #include <iostream>
 #include <string>
+using namespace std;
 
-
-template <typename T>
-class list // Реализация метода односвязного списка 
-{
-public:
-	list();
-	~list();
-
-	void push_back(T data);
-	int GetSize()
-	{
-		return size;
-	}
-
-	T& operator[](const int index);
-
-private:
-
-
-	template <typename T> // Шаблон класса ноуд
-	class Node
-	{
-	public:
-		Node* pNEXT;
-		T data;
-
-		Node(T data = T(), Node* pNEXT = nullptr)
-		{
-			this->data = data;
-			this->pNEXT = pNEXT;
-		}
-	};
-	int size;
-
-	Node <T> *head;
+// Структура для хранения информации о студенте
+struct Student {
+    string surname;
+    int marks[4];
+    Student* next;
 };
 
-
-template <typename T>
-list<T>::list() // Дефолтный указатель
-{
-	size = 0;
-	head = nullptr;
+// Функция для добавления нового элемента в список
+void add(Student*& head, string surname, int marks[]) {
+    // Создание нового элемента
+    Student* new_student = new Student;
+    new_student->surname = surname;
+    for (int i = 0; i < 4; i++) {
+        new_student->marks[i] = marks[i];
+    }
+    new_student->next = NULL;
+    // Добавление элемента в список
+    if (head == NULL) {
+        head = new_student;
+    }
+    else {
+        Student* current = head;
+        while (current->next != NULL) {
+            current = current->next;
+        }
+        current->next = new_student;
+    }
 }
 
-template <typename T>
-list<T>::~list()
-{
+// Функция для сортировки списка по фамилии студента
+void sort(Student*& head) {
+    if (head == NULL || head->next == NULL) {
+        return;
+    }
+    Student* current = head;
+    while (current != NULL) {
+        Student* min = current;
+        Student* temp = current->next;
+        while (temp != NULL) {
+            if (temp->surname < min->surname) {
+                min = temp;
+            }
+            temp = temp->next;
+        }
+        // Обмен элементов
+        string temp_surname = current->surname;
+        for (int i = 0; i < 4; i++) {
+            int temp_mark = current->marks[i];
+            current->marks[i] = min->marks[i];
+            min->marks[i] = temp_mark;
+        }
+        current->surname = min->surname;
+        min->surname = temp_surname;
+        current = current->next;
+    }
 }
 
-template<typename T>
-void list<T>::push_back(T data)		// Ввод данных в список
-{
-	if (head == nullptr)
-	{
-		head = new Node<T>(data);
-	}
-	else
-	{
-		Node<T>* temp = this->head;
-		while (temp -> pNEXT != nullptr)
-		{
-			temp = temp -> pNEXT;
-		}
-		temp -> pNEXT = new Node<T>(data);
-
-	}
-
-	size++;
+// Функция для вывода списка
+void print(Student* head) {
+    if (head == NULL) {
+        cout << "Список пуст" << endl;
+        return;
+    }
+    cout << "Список студентов:" << endl;
+    while (head != NULL) {
+        cout << head->surname << ": ";
+        for (int i = 0; i < 4; i++) {
+            cout << head->marks[i] << " ";
+        }
+        cout << endl;
+        head = head->next;
+    }
 }
 
-template<typename T>
-T& list<T>::operator[](const int index)		// Самая лёгкая часть, до которой я допёр за 30 минут.
-{											// Переборка до вывода необходимого значения
-	int count = 0;
-	Node<T>* temp = this->head;
+int main() {
 
-	while (temp != nullptr)
-	{
-		if (count == index)
-		{
-			return temp->data;
-		}
-		temp = temp->pNEXT;
-		count++;
-	}
-}
+    setlocale(LC_ALL, "Rus");
 
-
-int main()
-{
-	list<int> first;		// <тип данных>
-	first.push_back(5);		// Помещение значений
-	first.push_back(10);
-	first.push_back(30);
-
-	for (int i = 0; i < first.GetSize(); i++)		// Вывод данных
-	{
-		std::cout << first[i] << std::endl;
-	}
-
-	std::cout << first.GetSize();
-
-	return 0;
+    Student* head = NULL;
+    // Добавление элементов в список
+    add(head, "Иванов", new int[4] {5, 4, 5, 4});
+    add(head, "Петров", new int[4] {3, 3, 4, 5});
+    add(head, "Сидоров", new int[4] {4, 5, 4, 5});
+    add(head, "Козлов", new int[4] {5, 5, 5, 5});
+    // Сортировка списка
+    sort(head);
+    // Вывод списка
+    print(head);
+    return 0;
 }
