@@ -93,7 +93,7 @@ struct dormitory
 	int livingIn;
 };
 
-void FacultCountAndWrite(dormitory *arr, int size, bool IsWrite, std::string index)		// Счётчик уникальных элементов string
+void FacultSort(dormitory *arr, int size, std::string* index)		// Счётчик уникальных элементов string
 {
 	for (int i = 0; i < size; i++)
 	{
@@ -108,11 +108,7 @@ void FacultCountAndWrite(dormitory *arr, int size, bool IsWrite, std::string ind
 		}
 		if (isUnique)
 		{
-			if (IsWrite)
-			{
-				// strcpy(&index[0], arr[0].facultName);							// Зачем я это написал 
-				&index = arr[i].facultName.substr(0, 10);
-			}
+			index[i] = arr[i].facultName;
 		}
 	}
 }
@@ -136,7 +132,7 @@ int main()
 		std::cin >> arr[i].livingIn;
 	}
 
-	int ** square_counter = new  int* [size];
+	// int ** square_counter = new  int* [size];
 	
 	//for (int i = 0; i < size; i++)
 	//{
@@ -150,14 +146,14 @@ int main()
 	//	printf("\n");
 	//}
 
-	std::string facult; // сделать массивом :)
-	FacultCountAndWrite(arr, size, NULL, facult);
+	std::string* facult = new std::string[size];			// сделать массивом :)
+	FacultCountAndWrite(arr, size, facult);
 
 
 	for (int i = 0; i < size; i++)
-	{ }
-
-	std::cout << facult;
+	{ 
+		std::cout << facult[i];
+	}
 
 	return 0;
 }
