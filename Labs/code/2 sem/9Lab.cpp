@@ -75,10 +75,10 @@
 //{
 //    if (head == NULL) 
 //    {
-//        cout << "Ñïèñîê ïóñò" << endl;
+//        cout << "Ã‘Ã¯Ã¨Ã±Ã®Ãª Ã¯Ã³Ã±Ã²" << endl;
 //        return;
 //    }
-//    cout << "Ñïèñîê ñòóäåíòîâ:" << endl;
+//    cout << "Ã‘Ã¯Ã¨Ã±Ã®Ãª Ã±Ã²Ã³Ã¤Ã¥Ã­Ã²Ã®Ã¢:" << endl;
 //    while (head != NULL) 
 //    {
 //        cout << head->surname << ": ";
@@ -100,10 +100,10 @@
 //
 //    Student* head = NULL;
 //
-//    add(head, "Èâàíîâ", new int[4] {5, 4, 5, 4});
-//    add(head, "Ïåòðîâ", new int[4] {3, 3, 4, 5});
-//    add(head, "Ñèäîðîâ", new int[4] {4, 5, 4, 5});
-//    add(head, "Êîçëîâ", new int[4] {5, 5, 5, 5});
+//    add(head, "ÃˆÃ¢Ã Ã­Ã®Ã¢", new int[4] {5, 4, 5, 4});
+//    add(head, "ÃÃ¥Ã²Ã°Ã®Ã¢", new int[4] {3, 3, 4, 5});
+//    add(head, "Ã‘Ã¨Ã¤Ã®Ã°Ã®Ã¢", new int[4] {4, 5, 4, 5});
+//    add(head, "ÃŠÃ®Ã§Ã«Ã®Ã¢", new int[4] {5, 5, 5, 5});
 //
 //    sort(head);
 //    print(head);
