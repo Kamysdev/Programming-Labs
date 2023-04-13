@@ -82,55 +82,55 @@
 //	return 0;
 //}
 
-#include <iostream>
-#include <string>
-
-struct dormitory
-{
-	int roomNumb;
-	float square;
-	std::string facultName;
-	int livingIn;
-};
-
-void FacultSort(dormitory *arr, int size, std::string* index)		// —чЄтчик уникальных элементов string
-{
-	for (int i = 0; i < size; i++)
-	{
-		bool isUnique = false;
-
-		for (int j = i + 1; j < size; j++)
-		{
-			if ((arr[i].facultName != arr[j].facultName))
-			{
-				isUnique = true;
-			}
-		}
-		if (isUnique)
-		{
-			index[i] = arr[i].facultName;
-		}
-	}
-}
-
-int main()
-{
-	int size;
-
-	std::cin >> size;
-	dormitory *arr = new dormitory[size];
-
-	for (int i = 0; i < size; i++)
-	{
-		std::cout << "Room number: ";
-		std::cin >> arr[i].roomNumb;
-		std::cout << "Square: ";
-		std::cin >> arr[i].square;
-		std::cout << "Name of Facultet: ";
-		std::cin >> arr[i].facultName;
-		std::cout << "How many people live in: ";
-		std::cin >> arr[i].livingIn;
-	}
+//#include <iostream>
+//#include <string>
+//
+//struct dormitory
+//{
+//	int roomNumb;
+//	float square;
+//	std::string facultName;
+//	int livingIn;
+//};
+//
+//void FacultSort(dormitory *arr, int size, std::string* index)		// —чЄтчик уникальных элементов string
+//{
+//	for (int i = 0; i < size; i++)
+//	{
+//		bool isUnique = false;
+//
+//		for (int j = i + 1; j < size; j++)
+//		{
+//			if ((arr[i].facultName != arr[j].facultName))
+//			{
+//				isUnique = true;
+//			}
+//		}
+//		if (isUnique)
+//		{
+//			index[i] = arr[i].facultName;
+//		}
+//	}
+//}
+//
+//int main()
+//{
+//	int size;
+//
+//	std::cin >> size;
+//	dormitory *arr = new dormitory[size];
+//
+//	for (int i = 0; i < size; i++)
+//	{
+//		std::cout << "Room number: ";
+//		std::cin >> arr[i].roomNumb;
+//		std::cout << "Square: ";
+//		std::cin >> arr[i].square;
+//		std::cout << "Name of Facultet: ";
+//		std::cin >> arr[i].facultName;
+//		std::cout << "How many people live in: ";
+//		std::cin >> arr[i].livingIn;
+//	}
 
 	// int ** square_counter = new  int* [size];
 	
@@ -146,14 +146,14 @@ int main()
 	//	printf("\n");
 	//}
 
-	std::string* facult = new std::string[size];			// сделать массивом :)
-	FacultCountAndWrite(arr, size, facult);
-
-
-	for (int i = 0; i < size; i++)
-	{ 
-		std::cout << facult[i];
-	}
-
-	return 0;
-}
+//	std::string* facult = new std::string[size];			// сделать массивом :)
+//	FacultCountAndWrite(arr, size, facult);
+//
+//
+//	for (int i = 0; i < size; i++)
+//	{ 
+//		std::cout << facult[i];
+//	}
+//
+//	return 0;
+//}
