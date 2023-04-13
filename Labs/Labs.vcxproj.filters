@@ -60,9 +60,6 @@
     <ClCompile Include="code\2 sem\5lab.cpp">
       <Filter>Файлы ресурсов\2 sem Programming</Filter>
     </ClCompile>
-    <ClCompile Include="code\2 sem\8Lab.cpp">
-      <Filter>Файлы ресурсов\2 sem Programming</Filter>
-    </ClCompile>
     <ClCompile Include="code\SAOD\lab2 saod.cpp">
       <Filter>Файлы ресурсов\SAOD</Filter>
     </ClCompile>
@@ -104,6 +101,15 @@
     </ClCompile>
     <ClCompile Include="code\Testing\SDL2.cpp">
       <Filter>Файлы ресурсов</Filter>
+    </ClCompile>
+    <ClCompile Include="code\SAOD\Lab9Saod.cpp">
+      <Filter>Файлы ресурсов\SAOD</Filter>
+    </ClCompile>
+    <ClCompile Include="10labsaod.cpp">
+      <Filter>Файлы ресурсов\SAOD</Filter>
+    </ClCompile>
+    <ClCompile Include="code\2 sem\8Lab.cpp">
+      <Filter>Файлы ресурсов\2 sem Programming</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

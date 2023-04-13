@@ -10,7 +10,7 @@
 //} school;
 //
 //void swap(int &first, int &second)
-//{
+//{w
 //    int tmp = first;
 //    first = second;
 //    second = tmp;
@@ -82,99 +82,78 @@
 //	return 0;
 //}
 
-//#define _CRT_SECURE_NO_WARNINGS
-//#include <stdlib.h>
-//#include <stdio.h>
-//#include <string.h>
+//#include <iostream>
+//#include <string>
 //
-//typedef struct
+//struct dormitory
 //{
 //	int roomNumb;
 //	float square;
-//	char facultName[180];
+//	std::string facultName;
 //	int livingIn;
-//} dormitory;
+//};
 //
-//int FacultCountAndWrite(dormitory *arr, int size, bool IsWrite, char* index)		// Счётчик уникальных элементов char
+//void FacultSort(dormitory *arr, int size, std::string* index)		// Счётчик уникальных элементов string
 //{
-//	int flag = 0, tempcount = 0;
-//
 //	for (int i = 0; i < size; i++)
 //	{
-//		bool isUnique = true;
+//		bool isUnique = false;
 //
 //		for (int j = i + 1; j < size; j++)
 //		{
-//			if ((arr[i].facultName == arr[j].facultName))
+//			if ((arr[i].facultName != arr[j].facultName))
 //			{
-//				isUnique = false;
+//				isUnique = true;
 //			}
 //		}
 //		if (isUnique)
 //		{
-//			if (IsWrite)
-//			{
-//				// strcpy(&index[0], arr[0].facultName);							// Зачем я это написал 
-//
-//				strcpy(&index[tempcount], arr[i].facultName);
-//				strcpy(&index[tempcount + strlen(arr[i].facultName)], " ");
-//				tempcount += strlen(arr[i].facultName) + 1;
-//			}
-//			flag += strlen(arr[i].facultName) + 1;
-//		}
-//		if (size == 1)
-//		{
-//			flag += strlen(arr[i].facultName) + 1;
-//			if (IsWrite)
-//			{
-//				strcpy(&index[0], arr[0].facultName);
-//			}
+//			index[i] = arr[i].facultName;
 //		}
 //	}
-//
-//	return flag;
 //}
 //
 //int main()
 //{
 //	int size;
 //
-//	scanf_s("%d", &size);
+//	std::cin >> size;
 //	dormitory *arr = new dormitory[size];
 //
 //	for (int i = 0; i < size; i++)
 //	{
-//		printf("\nRoom number: ");
-//		scanf_s("%d", &arr[i].roomNumb);
-//		printf("Square: ");
-//		scanf_s("%f", &arr[i].square);
-//		printf("Name of Facultet: ");
-//		scanf_s("%s", arr[i].facultName, 10);
-//		printf("How many people live in: ");
-//		scanf_s("%d", &arr[i].livingIn);
+//		std::cout << "Room number: ";
+//		std::cin >> arr[i].roomNumb;
+//		std::cout << "Square: ";
+//		std::cin >> arr[i].square;
+//		std::cout << "Name of Facultet: ";
+//		std::cin >> arr[i].facultName;
+//		std::cout << "How many people live in: ";
+//		std::cin >> arr[i].livingIn;
 //	}
+
+	// int ** square_counter = new  int* [size];
+	
+	//for (int i = 0; i < size; i++)
+	//{
+	//	square_counter[i] = new  int[4];
+	//
+	//	for (int j = 0; j < 4; j++)
+	//	{
+	//		square_counter[i][j] = 2;
+	//		printf("%d ", square_counter[i][j]);
+	//	}
+	//	printf("\n");
+	//}
+
+//	std::string* facult = new std::string[size];			// сделать массивом :)
+//	FacultCountAndWrite(arr, size, facult);
 //
-//	int ** square_counter = new  int* [size];
-//	
-//	//for (int i = 0; i < size; i++)
-//	//{
-//	//	square_counter[i] = new  int[4];
-//	//
-//	//	for (int j = 0; j < 4; j++)
-//	//	{
-//	//		square_counter[i][j] = 2;
-//	//		printf("%d ", square_counter[i][j]);
-//	//	}
-//	//	printf("\n");
-//	//}
-//
-//	char* facult = new char [FacultCountAndWrite(arr, size, NULL, NULL)];
-//	int IsComplited = FacultCountAndWrite(arr, size, true, facult);
 //
 //	for (int i = 0; i < size; i++)
-//	{ }
-//
-//	printf(facult);
+//	{ 
+//		std::cout << facult[i];
+//	}
 //
 //	return 0;
 //}
