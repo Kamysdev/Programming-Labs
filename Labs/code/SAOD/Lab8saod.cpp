@@ -11,7 +11,7 @@
 //    string name;
 //    string surname;
 //    string adress;
-//    long int number;
+//    string number;
 //};
 //
 //void swapt(int& a, int& b)
@@ -89,16 +89,21 @@
 //
 //    cellphone_book arr[4] =
 //    {
-//                                  {"Yang", "Xiao Long", "Vale, Beer str 15/2", 9879335752},
-//                                  {"Igor", "Sirotkin", "Voshod", 9993322332},
-//                                  {"Stepan", "Bebralovskiy", "Berdsk, Morskaya str 16/2", 8005553535},
-//                                  {"Ronald", "Mc'Donald", "Ohaio", 3333332332}
+//                                  {"Yang", "Xiao Long", "Vale, Beer str 15/2", "9879335752"},
+//                                  {"Igor", "Sirotkin", "Voshod", "9993322332"},
+//                                  {"Stepan", "Bebralovskiy", "Berdsk, Morskaya str 16/2", "8005553535"},
+//                                  {"Ronald", "Mc'Donald", "Ohaio", "3333332332"}
 //    };
 //
 //    int arr1[4] = { 0, 1, 2, 3 },
 //        arr2[4] = { 0, 1, 2, 3 };
 //
-//    //selectionSortName(arr, arr1);
+//    printArray(arr, arr1);
+//
+//    for (int i = 0; i < 4; i++)
+//    {
+//        cout << arr1[i] << " ";
+//    }
 //
 //    selectSortUn<string>(arr, arr1, [](cellphone_book d)
 //        {
@@ -114,7 +119,7 @@
 //        cout << arr1[i] << " ";
 //    }
 //
-//    selectSortUn<long int>(arr, arr2, [](cellphone_book d)
+//    selectSortUn<string>(arr, arr2, [](cellphone_book d)
 //        {
 //            return d.number;
 //        });
