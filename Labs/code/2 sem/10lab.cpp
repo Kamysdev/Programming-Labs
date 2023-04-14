@@ -4,6 +4,19 @@
 
 int tempcount = 0;
 
+void swap(std::string* a, std::string* b)
+{
+	std::string* temp;
+	temp = a;
+    a = b;
+    b = temp;
+}
+
+void selectSortData(std::string* lines)
+{
+	// Make Sort bo inc all data from .txt file
+}
+
 int StringDelimiter(char* temp, std::string* lines, bool IsWrite)
 {
 	char* count[50] = {};
@@ -50,12 +63,14 @@ int main()
 	input.close();
 	input.open("./code/2 sem/materials/input.txt");
 
-	tempcount = 0;
+	tempcount = 0;			// Relocate first step
 
 	for (int i = 0; input.getline(temp_data, 50); i++)
 	{
 		int ELine = StringDelimiter(temp_data, lines, 1);
 	}
+
+	selectSortData(lines);
 
 	for (int i = 0; i < arraysize; i++)
 	{
