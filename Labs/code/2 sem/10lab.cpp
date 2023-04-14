@@ -2,16 +2,33 @@
 #include <string>
 #include <fstream>
 
-using namespace std;
+int tempcount = 0;
 
+int StringDelimiter(char* temp, std::string* lines, bool IsWrite)
+{
+	char* count[50] = {};
+
+	char* tmp_char = strtok_s(temp, " ", count);
+
+	while (tmp_char != NULL)
+	{
+		if (IsWrite)
+		{
+			lines[tempcount] = tmp_char;
+		}
+		tmp_char = strtok_s(NULL, " ", count);
+		tempcount++;
+	}
+
+	return tempcount;
+}
 
 int main()
 {
 	std::ifstream input("./code/2 sem/materials/input.txt");
 	std::ofstream output("./code/2 sem/materials/output.txt");
 	std::string templine;
-	char* count[50] = {};
-	char temp[50];
+	char temp_data[50];
 
 	if ((input.is_open() || output.is_open()) == NULL)
 	{
@@ -21,23 +38,29 @@ int main()
 			<< output.is_open();
 		return -1;
 	}
-
-	std::string lines[100];
-
-	for (int i = 0; input.getline(temp, 50); i++)
-	{
-		int tempcount = 0;
-		char* tmp_char = strtok_s(temp, " ", count);
-
-		while (tmp_char != NULL)
-		{
-			lines[tempcount] = tmp_char;
-			tmp_char = strtok_s(NULL, " ", count);
-			tempcount++;
-		}
-	}
 	
+	int arraysize = 0;
 
+	for (int i = 0; input.getline(temp_data, 50); i++)
+	{
+		arraysize += StringDelimiter(temp_data, NULL, NULL);
+	}
+	std::string* lines = new std::string[arraysize];
+
+	input.close();
+	input.open("./code/2 sem/materials/input.txt");
+
+	tempcount = 0;
+
+	for (int i = 0; input.getline(temp_data, 50); i++)
+	{
+		int ELine = StringDelimiter(temp_data, lines, 1);
+	}
+
+	for (int i = 0; i < arraysize; i++)
+	{
+		std::cout << lines[i] << " ";
+	}
 
 	return 0;
 }
