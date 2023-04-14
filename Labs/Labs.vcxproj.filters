@@ -111,6 +111,9 @@
     <ClCompile Include="code\2 sem\8Lab.cpp">
       <Filter>Файлы ресурсов\2 sem Programming</Filter>
     </ClCompile>
+    <ClCompile Include="code\2 sem\10lab.cpp">
+      <Filter>Файлы ресурсов\2 sem Programming</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="code\inform\test.db">
