@@ -142,7 +142,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="10labsaod.cpp" />
     <ClCompile Include="code\1 sem\Lab3__.cpp" />
     <ClCompile Include="code\1 sem\Lab5.cpp" />
     <ClCompile Include="code\1 sem\Lab6.cpp" />
@@ -162,6 +161,7 @@
     <ClCompile Include="code\inform\myikoleshko.c" />
     <ClCompile Include="code\inform\test.c" />
     <ClCompile Include="code\inform\test.cpp" />
+    <ClCompile Include="code\SAOD\10labsaod.cpp" />
     <ClCompile Include="code\SAOD\lab2 saod.cpp" />
     <ClCompile Include="code\SAOD\Lab6saod.cpp" />
     <ClCompile Include="code\SAOD\Lab7sa.cpp" />

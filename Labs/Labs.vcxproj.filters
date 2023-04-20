@@ -105,14 +105,14 @@
     <ClCompile Include="code\SAOD\Lab9Saod.cpp">
       <Filter>Файлы ресурсов\SAOD</Filter>
     </ClCompile>
-    <ClCompile Include="10labsaod.cpp">
-      <Filter>Файлы ресурсов\SAOD</Filter>
-    </ClCompile>
     <ClCompile Include="code\2 sem\8Lab.cpp">
       <Filter>Файлы ресурсов\2 sem Programming</Filter>
     </ClCompile>
     <ClCompile Include="code\2 sem\10lab.cpp">
       <Filter>Файлы ресурсов\2 sem Programming</Filter>
+    </ClCompile>
+    <ClCompile Include="code\SAOD\10labsaod.cpp">
+      <Filter>Файлы ресурсов\SAOD</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

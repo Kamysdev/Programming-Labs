@@ -4,23 +4,23 @@
 
 int tempcount = 0;
 
-void swap(std::string* a, std::string* b)
+void selectSortData(std::string* array, int size)
 {
-	std::string* temp;
-	temp = a;
-    a = b;
-    b = temp;
-}
-
-void selectSortData(std::string* lines)
-{
-	// Make Sort bo inc all data from .txt file
+	for (int step = 0; step < size - 1; ++step) 
+	{
+		for (int i = 0; i < size - step - 1; ++i) 
+		{
+			if (array[i] > array[i + 1])
+			{
+				std::swap<std::string>(array[i], array[i + 1]);
+			}
+		}
+	}
 }
 
 int StringDelimiter(char* temp, std::string* lines, bool IsWrite)
 {
 	char* count[50] = {};
-
 	char* tmp_char = strtok_s(temp, " ", count);
 
 	while (tmp_char != NULL)
@@ -33,6 +33,7 @@ int StringDelimiter(char* temp, std::string* lines, bool IsWrite)
 		tempcount++;
 	}
 
+	tempcount--;
 	return tempcount;
 }
 
@@ -40,9 +41,12 @@ int main()
 {
 	std::ifstream input("./code/2 sem/materials/input.txt");
 	std::ofstream output("./code/2 sem/materials/output.txt");
-	std::ofstream output1("./code/2 sem/materials/output1.data");
 	std::string templine;
-	char temp_data[50];
+
+	std::string freespace = "";
+	char temp_data[256];
+	int arraysize = 0, stringsize = 0;
+
 
 	if ((input.is_open() || output.is_open()) == NULL)
 	{
@@ -52,13 +56,14 @@ int main()
 			<< output.is_open();
 		return -1;
 	}
-	
-	int arraysize = 0;
 
-	for (int i = 0; input.getline(temp_data, 50); i++)
+	for (int i = 0; input.getline(temp_data, 256); i++)
 	{
 		arraysize += StringDelimiter(temp_data, NULL, NULL);
+		stringsize++;
 	}
+
+	arraysize /= 2;
 	std::string* lines = new std::string[arraysize];
 
 	input.close();
@@ -66,16 +71,19 @@ int main()
 
 	tempcount = 0;			// Relocate first step
 
-	for (int i = 0; input.getline(temp_data, 50); i++)
+	for (int i = 0; input.getline(temp_data, 256); i++)
 	{
 		int ELine = StringDelimiter(temp_data, lines, 1);
 	}
 
-	selectSortData(lines);
+	selectSortData(lines, arraysize);
 
 	for (int i = 0; i < arraysize; i++)
 	{
-		std::cout << lines[i] << " ";
+		if (lines[i] != freespace)
+		{
+			output << lines[i] << " ";
+		}
 	}
 
 	return 0;
