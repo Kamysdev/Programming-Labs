@@ -40,6 +40,7 @@ int main()
 {
 	std::ifstream input("./code/2 sem/materials/input.txt");
 	std::ofstream output("./code/2 sem/materials/output.txt");
+	std::ofstream output1("./code/2 sem/materials/output1.data");
 	std::string templine;
 	char temp_data[50];
 

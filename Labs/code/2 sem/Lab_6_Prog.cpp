@@ -1,8 +1,8 @@
-﻿#include <stdlib.h>
-#include <stdio.h>
-#include <iostream>
-#include <math.h>
-using namespace std;
+﻿//#include <stdlib.h>
+//#include <stdio.h>
+//#include <iostream>
+//#include <math.h>
+//using namespace std;
 
 
 //1
