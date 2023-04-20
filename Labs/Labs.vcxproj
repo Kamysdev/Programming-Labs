@@ -153,6 +153,8 @@
     <ClCompile Include="code\2 sem\8Lab.cpp" />
     <ClCompile Include="code\2 sem\9Lab.cpp" />
     <ClCompile Include="code\2 sem\LAab7.cpp" />
+    <ClCompile Include="code\2 sem\Lab11PERCEV.cpp" />
+    <ClCompile Include="code\2 sem\Lab11__.cpp" />
     <ClCompile Include="code\2 sem\Lab3(2 sem).cpp" />
     <ClCompile Include="code\2 sem\lab4.cpp" />
     <ClCompile Include="code\2 sem\Lab_6_Prog.cpp" />

@@ -100,10 +100,10 @@
 //
 //    Student* head = NULL;
 //
-//    add(head, "Èâàíîâ", new int[4] {5, 4, 5, 4});
-//    add(head, "Ïåòðîâ", new int[4] {3, 3, 4, 5});
-//    add(head, "Ñèäîðîâ", new int[4] {4, 5, 4, 5});
-//    add(head, "Êîçëîâ", new int[4] {5, 5, 5, 5});
+//    add(head, "bob", new int[4] {5, 4, 5, 4});
+//    add(head, "mob", new int[4] {3, 3, 4, 5});
+//    add(head, "stepan", new int[4] {4, 5, 4, 5});
+//    add(head, "amogus", new int[4] {5, 5, 5, 5});
 //
 //    sort(head);
 //    print(head);
