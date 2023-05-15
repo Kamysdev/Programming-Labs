@@ -164,7 +164,7 @@
     <ClCompile Include="code\inform\test.c" />
     <ClCompile Include="code\inform\test.cpp" />
     <ClCompile Include="code\SAOD\10labsaod.cpp" />
-    <ClCompile Include="code\SAOD\digital.cpp" />
+    <ClCompile Include="code\SAOD\13.cpp" />
     <ClCompile Include="code\SAOD\lab2 saod.cpp" />
     <ClCompile Include="code\SAOD\Lab6saod.cpp" />
     <ClCompile Include="code\SAOD\Lab7sa.cpp" />
