@@ -120,6 +120,9 @@
     <ClCompile Include="code\2 sem\Lab11PERCEV.cpp">
       <Filter>Файлы ресурсов\2 sem Programming</Filter>
     </ClCompile>
+    <ClCompile Include="code\SAOD\digital.cpp">
+      <Filter>Файлы ресурсов\SAOD</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="code\inform\test.db">
