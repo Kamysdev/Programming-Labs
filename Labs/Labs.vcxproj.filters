@@ -28,6 +28,9 @@
     <Filter Include="Файлы ресурсов\TRPO">
       <UniqueIdentifier>{e4c06f6e-30bc-4346-bd9d-2e23af767dad}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Файлы ресурсов\OOP">
+      <UniqueIdentifier>{c045c981-c878-418a-8767-1625f890fc7f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="code\1 sem\Lab9.cpp">
@@ -122,6 +125,12 @@
     </ClCompile>
     <ClCompile Include="code\SAOD\13.cpp">
       <Filter>Файлы ресурсов\SAOD</Filter>
+    </ClCompile>
+    <ClCompile Include="code\Testing\Lab6_ZFO.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="code\OOP\lab2.cpp">
+      <Filter>Файлы ресурсов\OOP</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
