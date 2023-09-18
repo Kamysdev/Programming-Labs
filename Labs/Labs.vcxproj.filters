@@ -69,9 +69,6 @@
     <ClCompile Include="code\inform\test.c">
       <Filter>Файлы ресурсов\inform</Filter>
     </ClCompile>
-    <ClCompile Include="code\inform\test.cpp">
-      <Filter>Файлы ресурсов\inform</Filter>
-    </ClCompile>
     <ClCompile Include="code\inform\11dz.c">
       <Filter>Файлы ресурсов\inform</Filter>
     </ClCompile>
@@ -130,9 +127,6 @@
       <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="code\OOP\lab2.cpp">
-      <Filter>Файлы ресурсов\OOP</Filter>
-    </ClCompile>
-    <ClCompile Include="OOP\test.cpp">
       <Filter>Файлы ресурсов\OOP</Filter>
     </ClCompile>
     <ClCompile Include="code\OOP\lab3.cpp">

@@ -117,12 +117,15 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <LanguageStandard_C>stdc11</LanguageStandard_C>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
       <LanguageStandard>stdcpp20</LanguageStandard>
+      <AdditionalIncludeDirectories>$(ProjectDir)SDL2-2.0.9\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(ProjectDir)SDL2-2.0.9\lib\x86;$(ProjectDir)SDL2-2.0.9\lib\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>SDL2.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -162,7 +165,6 @@
     <ClCompile Include="code\inform\myikoleshko — копия.c" />
     <ClCompile Include="code\inform\myikoleshko.c" />
     <ClCompile Include="code\inform\test.c" />
-    <ClCompile Include="code\inform\test.cpp" />
     <ClCompile Include="code\OOP\lab2.cpp" />
     <ClCompile Include="code\OOP\lab3.cpp" />
     <ClCompile Include="code\SAOD\10labsaod.cpp" />
@@ -176,7 +178,6 @@
     <ClCompile Include="code\SAOD\saod5true.cpp" />
     <ClCompile Include="code\Testing\Lab6_ZFO.cpp" />
     <ClCompile Include="code\Testing\SDL2.cpp" />
-    <ClCompile Include="OOP\test.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="code\inform\movies.db" />
