@@ -132,6 +132,12 @@
     <ClCompile Include="code\OOP\lab2.cpp">
       <Filter>Файлы ресурсов\OOP</Filter>
     </ClCompile>
+    <ClCompile Include="OOP\test.cpp">
+      <Filter>Файлы ресурсов\OOP</Filter>
+    </ClCompile>
+    <ClCompile Include="code\OOP\lab3.cpp">
+      <Filter>Файлы ресурсов\OOP</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="code\inform\test.db">

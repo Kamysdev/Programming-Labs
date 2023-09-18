@@ -164,6 +164,7 @@
     <ClCompile Include="code\inform\test.c" />
     <ClCompile Include="code\inform\test.cpp" />
     <ClCompile Include="code\OOP\lab2.cpp" />
+    <ClCompile Include="code\OOP\lab3.cpp" />
     <ClCompile Include="code\SAOD\10labsaod.cpp" />
     <ClCompile Include="code\SAOD\13.cpp" />
     <ClCompile Include="code\SAOD\lab2 saod.cpp" />
@@ -175,6 +176,7 @@
     <ClCompile Include="code\SAOD\saod5true.cpp" />
     <ClCompile Include="code\Testing\Lab6_ZFO.cpp" />
     <ClCompile Include="code\Testing\SDL2.cpp" />
+    <ClCompile Include="OOP\test.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="code\inform\movies.db" />
