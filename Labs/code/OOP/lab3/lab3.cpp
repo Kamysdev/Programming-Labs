@@ -27,7 +27,6 @@ int main(int argc, char** argv)
 			dot.x = arr[i].GetX();
 			dot.y = arr[i].GetY();
 			arr[i].LinearMove();
-
 			SDL_RenderCopy(win.ren, cat, 0, &dot);			
 		}
 		win.ren;
