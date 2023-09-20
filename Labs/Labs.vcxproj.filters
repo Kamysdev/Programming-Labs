@@ -123,16 +123,19 @@
     <ClCompile Include="code\SAOD\13.cpp">
       <Filter>Файлы ресурсов\SAOD</Filter>
     </ClCompile>
+    <ClCompile Include="code\OOP\1lab.cpp">
+      <Filter>Файлы ресурсов\OOP</Filter>
+    </ClCompile>
     <ClCompile Include="code\OOP\lab2.cpp">
       <Filter>Файлы ресурсов\OOP</Filter>
     </ClCompile>
-    <ClCompile Include="code\OOP\headers\SDL_Init.cpp">
+    <ClCompile Include="code\OOP\lab3\figure.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="code\OOP\lab3\lab3.cpp">
       <Filter>Файлы ресурсов\OOP</Filter>
     </ClCompile>
-    <ClCompile Include="code\OOP\lab3\figure.cpp">
+    <ClCompile Include="code\OOP\headers\SDL_Init.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\..\..\Downloads\Telegram Desktop\main (6).cpp">

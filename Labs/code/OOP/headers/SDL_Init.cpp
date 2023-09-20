@@ -1,18 +1,24 @@
 #include "SDL_init.hpp"
 
-SDL_Window* graphic::GetWindow()
+SDL_Window& graphic::GetWindow()
 {
-    return window;
+    return *window;
 }
 
-SDL_Surface* graphic::GetSurface()
+SDL_Surface& graphic::GetSurface()
 {
-    return surface;
+    return *surface;
 }
 
-SDL_Renderer* graphic::GetRen()
+int graphic::AddToSurface()
 {
-    return ren;
+    surface = SDL_LoadBMP("1.bmp");
+    return 0;
+}
+
+SDL_Renderer& graphic::GetRen()
+{
+    return *ren;
 }
 
 int graphic::init()
