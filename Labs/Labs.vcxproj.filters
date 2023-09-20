@@ -135,6 +135,9 @@
     <ClCompile Include="code\OOP\lab3\figure.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\..\..\Downloads\Telegram Desktop\main (6).cpp">
+      <Filter>Файлы ресурсов</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="code\inform\test.db">
