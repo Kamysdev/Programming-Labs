@@ -36,7 +36,7 @@ private:
 	int randspeed;
 };
 
-class Line : public Position
+class Line : public tPoint
 {
 	// create call from init to fig
 };
@@ -61,7 +61,7 @@ class Elips : public Triangle
 
 };
 
-class diamond : public Elips
+class Diamond : public Elips
 {
 
 };

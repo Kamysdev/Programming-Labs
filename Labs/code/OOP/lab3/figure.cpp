@@ -50,28 +50,30 @@ int tPoint::SwitchDir()
 	if (GetX() >= 1230 || GetX() <= 0)
 	{
 		SetAngleDirectionX(direction);
-		if (GetX() >= 1230)
+		if (GetX() > 1230)
 		{
 			SetX(-15);
 		}
-		if (GetX() <= 0)
+		if (GetX() < 0)
 		{
 			SetX(15);
 		}
+		randspeed = 1 + rand() % 8;
 	}
 	if (GetY() >= 670 || GetY() <= 0)
 	{
 		SetAngleDirectionY(direction);
-		if (GetY() >= 760)
+		if (GetY() > 670)
 		{
-			SetY(-10);
+			SetY(-15);
 		}
-		if (GetY() <= 0)
+		if (GetY() < 0)
 		{
 			SetY(10);
 		}
+		randspeed = 1 + rand() % 3;
 	}
-	randspeed = 1 + rand() % 3;
+
 	return 0;
 }
 
