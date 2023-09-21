@@ -45,30 +45,30 @@ int SetAngleDirectionY(int& direction)
 	return 0;
 }
 
-int SwitchDir(int& direction, int& randspeed)
+int tPoint::SwitchDir()
 {
 	if (GetX() >= 1230 || GetX() <= 0)
 	{
 		SetAngleDirectionX(direction);
 		if (GetX() >= 1230)
 		{
-			position.SetX(-15);
+			SetX(-15);
 		}
-		if (position.GetX() <= 0)
+		if (GetX() <= 0)
 		{
-			position.SetX(15);
+			SetX(15);
 		}
 	}
-	if (position.GetY() >= 670 || position.GetY() <= 0)
+	if (GetY() >= 670 || GetY() <= 0)
 	{
 		SetAngleDirectionY(direction);
-		if (position.GetY() >= 760)
+		if (GetY() >= 760)
 		{
-			position.SetY(-10);
+			SetY(-10);
 		}
-		if (position.GetY() <= 0)
+		if (GetY() <= 0)
 		{
-			position.SetY(10);
+			SetY(10);
 		}
 	}
 	randspeed = 1 + rand() % 3;
@@ -98,17 +98,17 @@ int tPoint::LinearMove()
 		SetY(randspeed);
 	}
 
-	SwitchDir(direction, randspeed);
+	SwitchDir();
 
 	return 0;
 }
 
 int tPoint::RandMove()
 {
-	position.SetX(randspeed);
-	position.SetY(randspeed);
+	SetX(randspeed);
+	SetY(randspeed);
 
-	SwitchDir(position, direction, randspeed);
+	SwitchDir();
 	randspeed = 1 + rand() % 8 - 4;
 
 	return 0;

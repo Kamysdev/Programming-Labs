@@ -16,6 +16,7 @@ public:
 	int GetY();
 	int SetX(int temp);
 	int SetY(int temp);
+
 	Position();
 private:
 	int posx;
@@ -27,9 +28,9 @@ class tPoint : public Position
 public:
 	int LinearMove();
 	int RandMove();
+	int SwitchDir();
 
 	tPoint();
-
 private:
 	int direction;
 	int randspeed;
@@ -37,30 +38,30 @@ private:
 
 class Line : public Position
 {
-
+	// create call from init to fig
 };
 
-class Circle
+class Circle : public Line
 {
 
 };
 
-class Rect
+class Rect : public Circle
 {
 
 };
 
-class Triangle
+class Triangle : public Rect
 {
 
 };
 
-class Elips
+class Elips : public Triangle
 {
 
 };
 
-class diamond
+class diamond : public Elips
 {
 
 };

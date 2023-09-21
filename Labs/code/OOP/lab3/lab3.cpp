@@ -30,8 +30,8 @@ int main(int argc, char** argv)
 		{
 			for (int i = 0; i < size; i++)
 			{
-				dot.x = arr[i].position.GetX();
-				dot.y = arr[i].position.GetY();
+				dot.x = arr[i].GetX();
+				dot.y = arr[i].GetY();
 				arr[i].LinearMove();
 				SDL_RenderCopy(&win.GetRen(), cat, 0, &dot);
 			}
@@ -43,8 +43,8 @@ int main(int argc, char** argv)
 		{
 			for (int i = 0; i < size; i++)
 			{
-				dot.x = arr[i].position.GetX();
-				dot.y = arr[i].position.GetY();
+				dot.x = arr[i].GetX();
+				dot.y = arr[i].GetY();
 				arr[i].RandMove();
 				SDL_RenderCopy(&win.GetRen(), cat, 0, &dot);
 			}
