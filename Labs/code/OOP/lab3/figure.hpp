@@ -16,6 +16,8 @@ public:
 	int GetY();
 	int SetX(int temp);
 	int SetY(int temp);
+	int SwitchDir(int& direction, int& randspeed);
+
 	Position();
 private:
 	int posx;
@@ -37,25 +39,26 @@ private:
 
 class Line : public Position
 {
+public:
 
 };
 
-class Circle
+class Circle : public Line
 {
 
 };
 
-class Rect
+class Rect : public Circle
 {
 
 };
 
-class Triangle
+class Triangle : public Rect
 {
 
 };
 
-class Elips
+class Elips : public Triangle
 {
 
 };
