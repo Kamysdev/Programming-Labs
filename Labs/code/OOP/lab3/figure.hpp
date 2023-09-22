@@ -1,5 +1,5 @@
 #pragma once
-#include <iostream>
+#include "../headers/SDL_Init.hpp"
 
 enum Direction
 {
@@ -38,7 +38,11 @@ private:
 
 class Line : public tPoint
 {
-	// create call from init to fig
+public:
+	SDL_Texture& GetLine();
+	SDL_Texture* SetLine(graphic windows);
+private:
+	SDL_Texture* LineTexture;
 };
 
 class Circle : public Line

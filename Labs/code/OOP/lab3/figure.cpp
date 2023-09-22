@@ -149,3 +149,18 @@ Position::Position()
 	posx = rand() % 1230;
 	posy = rand() % 670;
 }
+
+SDL_Texture& Line::GetLine()
+{
+	return *LineTexture;
+
+}
+
+SDL_Texture* Line::SetLine(graphic windows)
+{
+	LineTexture = SDL_CreateTextureFromSurface(&windows.GetRen(), &windows.GetSurface());
+
+
+
+	return nullptr;
+}
