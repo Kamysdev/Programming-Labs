@@ -45,6 +45,8 @@ class Circle : public Line
 public:
 	SDL_Texture& GetCircle();
 	int SetCircle(graphic windows);
+
+	Circle();
 private:
 	SDL_Texture* CircleTexture;
 };

@@ -4,16 +4,16 @@ int main(int argc, char** argv)
 {
 	srand((unsigned int)time(NULL));
 
-	int size = 100;
+	int size = 1000;
 	graphic win{};
 	int error{};
 	int task = 1;
 	error = win.init();
 	Diamond* arr = new Diamond[size];
-	SDL_Rect dot = { 0, 0, 50, 30 };
+	SDL_Rect dot = { 0, 0, 50, 50 };
 	SDL_SetRenderDrawColor(&win.GetRen(), 255, 255, 255, 255);
 
-	win.AddToSurface("materials/rect.bmp");
+	win.AddToSurface("materials/circle.bmp");
 	for (int i = 0; i < size; i++)
 	{
 		arr[i].SetLine(win);
