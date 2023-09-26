@@ -164,3 +164,8 @@ SDL_Texture* Line::SetLine(graphic windows)
 
 	return nullptr;
 }
+
+Line::Line()
+{
+	LineTexture = NULL;
+}

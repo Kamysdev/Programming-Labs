@@ -41,6 +41,8 @@ class Line : public tPoint
 public:
 	SDL_Texture& GetLine();
 	SDL_Texture* SetLine(graphic windows);
+
+	Line();
 private:
 	SDL_Texture* LineTexture;
 };
