@@ -181,3 +181,12 @@ Circle::Circle()
 	CircleTexture = NULL;
 }
 
+Rect::Rect()
+{
+	RectTexture = NULL;
+}
+
+Triangle::Triangle()
+{
+	TriangleTexture = NULL;
+}

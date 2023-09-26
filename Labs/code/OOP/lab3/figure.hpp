@@ -53,24 +53,30 @@ private:
 
 class Rect : public Circle
 {
+public:
+	Rect();
 private:
 	SDL_Texture* RectTexture;
 };
 
 class Triangle : public Rect
 {
+public:
+	Triangle();
 private:
 	SDL_Texture* TriangleTexture;
 };
 
 class Elips : public Triangle
 {
+public:
 private:
 	SDL_Texture* ElipsTexture;
 };
 
 class Diamond : public Elips
 {
+public:
 private:
 	SDL_Texture* DiamondTexture;
 };

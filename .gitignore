@@ -363,3 +363,4 @@ MigrationBackup/
 FodyWeavers.xsd
 
 SDL_Debug/
+*.tlog

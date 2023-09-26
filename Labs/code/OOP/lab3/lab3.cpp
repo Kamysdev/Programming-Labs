@@ -4,7 +4,7 @@ int main(int argc, char** argv)
 {
 	srand((unsigned int)time(NULL));
 
-	int size = 1000;
+	int size = 100;
 	graphic win{};
 	int error{};
 	int task = 1;
@@ -13,7 +13,7 @@ int main(int argc, char** argv)
 	SDL_Rect dot = { 0, 0, 50, 50 };
 	SDL_SetRenderDrawColor(&win.GetRen(), 255, 255, 255, 255);
 
-	win.AddToSurface("materials/circle.bmp");
+	win.AddToSurface("materials/diamond.bmp");
 	for (int i = 0; i < size; i++)
 	{
 		arr[i].SetLine(win);

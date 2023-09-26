@@ -12,7 +12,7 @@ SDL_Surface& graphic::GetSurface()
 
 int graphic::AddToSurface(std::string name)
 {
-    surface = SDL_LoadBMP(name.c_str(), "rb");
+    surface = SDL_LoadBMP(name.c_str());
     return 0;
 }
 
