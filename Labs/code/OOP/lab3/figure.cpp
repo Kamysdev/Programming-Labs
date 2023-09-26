@@ -120,34 +120,30 @@ tPoint::tPoint()
 {
 	direction = rand() % 4;
 	randspeed = 1 + rand() % 3;
+	posx = rand() % 1240;
+	posy = rand() % 670;
 }
 
-int Position::GetX()
+int tPoint::GetX()
 {
 	return posx;
 }
 
-int Position::GetY()
+int tPoint::GetY()
 {
 	return posy;
 }
 
-int Position::SetX(int temp)
+int tPoint::SetX(int temp)
 {
 	posx += temp;
 	return 0;
 }
 
-int Position::SetY(int temp)
+int tPoint::SetY(int temp)
 {
 	posy += temp;
 	return 0;
-}
-
-Position::Position()
-{
-	posx = rand() % 1230;
-	posy = rand() % 670;
 }
 
 SDL_Texture& Line::GetLine()
@@ -160,8 +156,6 @@ SDL_Texture* Line::SetLine(graphic windows)
 {
 	LineTexture = SDL_CreateTextureFromSurface(&windows.GetRen(), &windows.GetSurface());
 
-
-
 	return nullptr;
 }
 
@@ -169,3 +163,21 @@ Line::Line()
 {
 	LineTexture = NULL;
 }
+
+SDL_Texture& Circle::GetCircle()
+{
+	return *CircleTexture;
+}
+
+int Circle::SetCircle(graphic windows)
+{
+	CircleTexture = SDL_CreateTextureFromSurface(&windows.GetRen(), & windows.GetSurface());
+
+	return 0;
+}
+
+Circle::Circle()
+{
+	CircleTexture = NULL;
+}
+

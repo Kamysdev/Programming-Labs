@@ -9,7 +9,7 @@ enum Direction
 	LOWER_RIGHT
 };
 
-class Position
+class tPoint
 {
 public:
 	int GetX();
@@ -17,15 +17,6 @@ public:
 	int SetX(int temp);
 	int SetY(int temp);
 
-	Position();
-private:
-	int posx;
-	int posy;
-};
-
-class tPoint : public Position
-{
-public:
 	int LinearMove();
 	int RandMove();
 	int SwitchDir();
@@ -34,6 +25,8 @@ public:
 private:
 	int direction;
 	int randspeed;
+	int posx;
+	int posy;
 };
 
 class Line : public tPoint
@@ -49,25 +42,33 @@ private:
 
 class Circle : public Line
 {
-
+public:
+	SDL_Texture& GetCircle();
+	int SetCircle(graphic windows);
+private:
+	SDL_Texture* CircleTexture;
 };
 
 class Rect : public Circle
 {
-
+private:
+	SDL_Texture* RectTexture;
 };
 
 class Triangle : public Rect
 {
-
+private:
+	SDL_Texture* TriangleTexture;
 };
 
 class Elips : public Triangle
 {
-
+private:
+	SDL_Texture* ElipsTexture;
 };
 
 class Diamond : public Elips
 {
-
+private:
+	SDL_Texture* DiamondTexture;
 };
