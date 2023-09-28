@@ -1,27 +1,24 @@
-#include "../headers/SDL_Init.hpp"
 #include "figure.hpp"
-
-SDL_Texture* cat = NULL;
 
 int main(int argc, char** argv)
 {
-	srand(time(NULL));
+	srand((unsigned int)time(NULL));
+
+	int size = 100;
 	graphic win{};
 
 	int size = 100;
 	int error{};
 	int task = 1;
 	error = win.init();
-
-	tPoint* arr = new tPoint[size];
+	Diamond* arr = new Diamond[size];
 	SDL_Rect dot = { 0, 0, 50, 50 };
-	SDL_SetRenderDrawColor(&win.GetRen(), 0, 0, 0, 255);
+	SDL_SetRenderDrawColor(&win.GetRen(), 255, 255, 255, 255);
 
-	win.AddToSurface();
-	cat = SDL_CreateTextureFromSurface(&win.GetRen(), &win.GetSurface());
-	if (cat == NULL)
+	win.AddToSurface("materials/diamond.bmp");
+	for (int i = 0; i < size; i++)
 	{
-		return 2;
+		arr[i].SetLine(win);
 	}
 
 	while (error == 0)
@@ -33,19 +30,7 @@ int main(int argc, char** argv)
 				dot.x = arr[i].GetX();
 				dot.y = arr[i].GetY();
 				arr[i].LinearMove();
-				SDL_RenderCopy(&win.GetRen(), cat, 0, &dot);
-			}
-			SDL_RenderPresent(&win.GetRen());
-			SDL_RenderClear(&win.GetRen());
-		}
-		else
-		{
-			for (int i = 0; i < size; i++)
-			{
-				dot.x = arr[i].GetX();
-				dot.y = arr[i].GetY();
-				arr[i].RandMove();
-				SDL_RenderCopy(&win.GetRen(), cat, 0, &dot);
+				SDL_RenderCopy(&win.GetRen(), &arr[i].GetLine(), 0, &dot);
 			}
 			SDL_RenderPresent(&win.GetRen());
 			SDL_RenderClear(&win.GetRen());

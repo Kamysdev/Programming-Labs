@@ -138,9 +138,6 @@
     <ClCompile Include="code\OOP\headers\SDL_Init.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\..\Downloads\Telegram Desktop\main (6).cpp">
-      <Filter>Файлы ресурсов</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="code\inform\test.db">

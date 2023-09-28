@@ -206,7 +206,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\..\..\Downloads\Telegram Desktop\main (6).cpp" />
     <ClCompile Include="code\1 sem\Lab3__.cpp" />
     <ClCompile Include="code\1 sem\Lab5.cpp" />
     <ClCompile Include="code\1 sem\Lab6.cpp" />

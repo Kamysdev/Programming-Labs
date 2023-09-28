@@ -1,5 +1,5 @@
 #pragma once
-#include <iostream>
+#include "../headers/SDL_Init.hpp"
 
 enum Direction
 {
@@ -9,61 +9,74 @@ enum Direction
 	LOWER_RIGHT
 };
 
-class Position
+class tPoint
 {
 public:
 	int GetX();
 	int GetY();
 	int SetX(int temp);
 	int SetY(int temp);
-	int SwitchDir(int& direction, int& randspeed);
 
-	Position();
+	int LinearMove();
+	int RandMove();
+	int SwitchDir();
+
+	tPoint();
 private:
+	int direction;
+	int randspeed;
 	int posx;
 	int posy;
 };
 
-class tPoint : public Position
+class Line : public tPoint
 {
 public:
-	int LinearMove();
-	int RandMove();
+	SDL_Texture& GetLine();
+	SDL_Texture* SetLine(graphic windows);
 
-	tPoint();
-
+	Line();
 private:
-	int direction;
-	int randspeed;
-};
-
-class Line : public Position
-{
-public:
-
+	SDL_Texture* LineTexture;
 };
 
 class Circle : public Line
 {
+public:
+	SDL_Texture& GetCircle();
+	int SetCircle(graphic windows);
 
+	Circle();
+private:
+	SDL_Texture* CircleTexture;
 };
 
 class Rect : public Circle
 {
-
+public:
+	Rect();
+private:
+	SDL_Texture* RectTexture;
 };
 
 class Triangle : public Rect
 {
-
+public:
+	Triangle();
+private:
+	SDL_Texture* TriangleTexture;
 };
 
 class Elips : public Triangle
 {
-
+public:
+private:
+	SDL_Texture* ElipsTexture;
 };
 
-class diamond
+class Diamond : public Elips
 {
-
+public:
+private:
+	SDL_Texture* DiamondTexture;
 };

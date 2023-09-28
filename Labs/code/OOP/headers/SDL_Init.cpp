@@ -10,9 +10,9 @@ SDL_Surface& graphic::GetSurface()
     return *surface;
 }
 
-int graphic::AddToSurface()
+int graphic::AddToSurface(std::string name)
 {
-    surface = SDL_LoadBMP("1.bmp");
+    surface = SDL_LoadBMP(name.c_str());
     return 0;
 }
 

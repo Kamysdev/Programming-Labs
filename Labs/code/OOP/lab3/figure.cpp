@@ -45,33 +45,35 @@ int SetAngleDirectionY(int& direction)
 	return 0;
 }
 
-int Position::SwitchDir(int& direction, int& randspeed)
+int tPoint::SwitchDir()
 {
 	if (GetX() >= 1230 || GetX() <= 0)
 	{
 		SetAngleDirectionX(direction);
-		if (GetX() >= 1230)
+		if (GetX() > 1230)
 		{
 			SetX(-15);
 		}
-		if (GetX() <= 0)
+		if (GetX() < 0)
 		{
 			SetX(15);
 		}
+		randspeed = 1 + rand() % 8;
 	}
 	if (GetY() >= 670 || GetY() <= 0)
 	{
 		SetAngleDirectionY(direction);
-		if (GetY() >= 760)
+		if (GetY() > 670)
 		{
-			SetY(-10);
+			SetY(-15);
 		}
-		if (GetY() <= 0)
+		if (GetY() < 0)
 		{
 			SetY(10);
 		}
+		randspeed = 1 + rand() % 3;
 	}
-	randspeed = 1 + rand() % 3;
+
 	return 0;
 }
 
@@ -98,7 +100,7 @@ int tPoint::LinearMove()
 		SetY(randspeed);
 	}
 
-	SwitchDir(direction, randspeed);
+	SwitchDir();
 
 	return 0;
 }
@@ -108,7 +110,7 @@ int tPoint::RandMove()
 	SetX(randspeed);
 	SetY(randspeed);
 
-	SwitchDir(direction, randspeed);
+	SwitchDir();
 	randspeed = 1 + rand() % 8 - 4;
 
 	return 0;
@@ -118,32 +120,73 @@ tPoint::tPoint()
 {
 	direction = rand() % 4;
 	randspeed = 1 + rand() % 3;
+	posx = rand() % 1240;
+	posy = rand() % 670;
 }
 
-int Position::GetX()
+int tPoint::GetX()
 {
 	return posx;
 }
 
-int Position::GetY()
+int tPoint::GetY()
 {
 	return posy;
 }
 
-int Position::SetX(int temp)
+int tPoint::SetX(int temp)
 {
 	posx += temp;
 	return 0;
 }
 
-int Position::SetY(int temp)
+int tPoint::SetY(int temp)
 {
 	posy += temp;
 	return 0;
 }
 
-Position::Position()
+SDL_Texture& Line::GetLine()
 {
-	posx = rand() % 1230;
-	posy = rand() % 670;
+	return *LineTexture;
+
+}
+
+SDL_Texture* Line::SetLine(graphic windows)
+{
+	LineTexture = SDL_CreateTextureFromSurface(&windows.GetRen(), &windows.GetSurface());
+
+	return nullptr;
+}
+
+Line::Line()
+{
+	LineTexture = NULL;
+}
+
+SDL_Texture& Circle::GetCircle()
+{
+	return *CircleTexture;
+}
+
+int Circle::SetCircle(graphic windows)
+{
+	CircleTexture = SDL_CreateTextureFromSurface(&windows.GetRen(), & windows.GetSurface());
+
+	return 0;
+}
+
+Circle::Circle()
+{
+	CircleTexture = NULL;
+}
+
+Rect::Rect()
+{
+	RectTexture = NULL;
+}
+
+Triangle::Triangle()
+{
+	TriangleTexture = NULL;
 }
