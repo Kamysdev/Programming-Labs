@@ -294,6 +294,8 @@
     <ClCompile Include="code\OOP\lab3\lab3.cpp" />
     <ClCompile Include="code\SAOD\10labsaod.cpp" />
     <ClCompile Include="code\SAOD\13.cpp" />
+    <ClCompile Include="code\SAOD\3sem lab0.cpp" />
+    <ClCompile Include="code\SAOD\3Sem lab1.cpp" />
     <ClCompile Include="code\SAOD\lab2 saod.cpp" />
     <ClCompile Include="code\SAOD\Lab6saod.cpp" />
     <ClCompile Include="code\SAOD\Lab7sa.cpp" />
