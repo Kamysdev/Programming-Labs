@@ -4,7 +4,6 @@ int main(int argc, char** argv)
 {
 	srand((unsigned int)time(NULL));
 
-	int size = 100;
 	graphic win{};
 
 	int size = 100;
