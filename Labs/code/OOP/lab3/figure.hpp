@@ -9,6 +9,17 @@ enum Direction
 	LOWER_RIGHT
 };
 
+enum SFigure
+{
+	POINT,
+	LINE,
+	CIRCLE,
+	RECT,
+	TRIANGLE,
+	ELIPS,
+	DIAMOND
+};
+
 class tPoint
 {
 public:
@@ -19,21 +30,28 @@ public:
 
 	int LinearMove();
 	int RandMove();
-	int SwitchDir();
+
+	int SetSurface(std::string locality);
 
 	tPoint();
+
+protected:
+	SDL_Surface* tempSurface;
+
 private:
 	int direction;
 	int randspeed;
 	int posx;
 	int posy;
+
+	int SwitchDir();
 };
 
 class Line : public tPoint
 {
 public:
 	SDL_Texture& GetLine();
-	SDL_Texture* SetLine(graphic windows);
+	int* SetLine(graphic windows);
 
 	Line();
 private:
@@ -54,6 +72,9 @@ private:
 class Rect : public Circle
 {
 public:
+	SDL_Texture& GetRect();
+	int SetRect(graphic windows);
+
 	Rect();
 private:
 	SDL_Texture* RectTexture;
@@ -62,6 +83,9 @@ private:
 class Triangle : public Rect
 {
 public:
+	SDL_Texture& GetTriangle();
+	int SetTriangle(graphic windows);
+
 	Triangle();
 private:
 	SDL_Texture* TriangleTexture;
@@ -70,6 +94,10 @@ private:
 class Elips : public Triangle
 {
 public:
+	SDL_Texture& GetElips();
+	int SetElips(graphic windows);
+
+	Elips();
 private:
 	SDL_Texture* ElipsTexture;
 };
@@ -77,6 +105,18 @@ private:
 class Diamond : public Elips
 {
 public:
+	SDL_Texture& GetDiamond();
+	int SetDiamond(graphic windows);
+
+	Diamond();
 private:
 	SDL_Texture* DiamondTexture;
+};
+
+class Figure : public Diamond
+{
+public:
+	int SelectFigure(int fignum, graphic graphics);
+
+	SDL_Texture& GetTexture(int fignum);
 };

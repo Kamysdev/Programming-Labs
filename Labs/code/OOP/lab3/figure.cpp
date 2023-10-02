@@ -116,12 +116,21 @@ int tPoint::RandMove()
 	return 0;
 }
 
+int tPoint::SetSurface(std::string locality)
+{
+	tempSurface = SDL_LoadBMP(locality.c_str());
+
+	return 0;
+}
+
 tPoint::tPoint()
 {
 	direction = rand() % 4;
 	randspeed = 1 + rand() % 3;
 	posx = rand() % 1240;
 	posy = rand() % 670;
+
+	tempSurface = NULL;
 }
 
 int tPoint::GetX()
@@ -152,11 +161,12 @@ SDL_Texture& Line::GetLine()
 
 }
 
-SDL_Texture* Line::SetLine(graphic windows)
+int* Line::SetLine(graphic windows)
 {
-	LineTexture = SDL_CreateTextureFromSurface(&windows.GetRen(), &windows.GetSurface());
+	SetSurface("materials/Line.bmp");
+	LineTexture = SDL_CreateTextureFromSurface(&windows.GetRen(), tempSurface);
 
-	return nullptr;
+	return 0;
 }
 
 Line::Line()
@@ -171,7 +181,8 @@ SDL_Texture& Circle::GetCircle()
 
 int Circle::SetCircle(graphic windows)
 {
-	CircleTexture = SDL_CreateTextureFromSurface(&windows.GetRen(), & windows.GetSurface());
+	SetSurface("materials/Circle.bmp");
+	CircleTexture = SDL_CreateTextureFromSurface(&windows.GetRen(), tempSurface);
 
 	return 0;
 }
@@ -181,12 +192,129 @@ Circle::Circle()
 	CircleTexture = NULL;
 }
 
+SDL_Texture& Rect::GetRect()
+{
+	return *RectTexture;
+}
+
+int Rect::SetRect(graphic windows)
+{
+	SetSurface("materials/Rect.bmp");
+	RectTexture = SDL_CreateTextureFromSurface(&windows.GetRen(), tempSurface);
+
+	return 0;
+}
+
 Rect::Rect()
 {
 	RectTexture = NULL;
 }
 
+SDL_Texture& Triangle::GetTriangle()
+{
+	return *TriangleTexture;
+}
+
+int Triangle::SetTriangle(graphic windows)
+{
+	SetSurface("materials/Triangle.bmp");
+	TriangleTexture = SDL_CreateTextureFromSurface(&windows.GetRen(), tempSurface);
+
+	return 0;
+}
+
 Triangle::Triangle()
 {
 	TriangleTexture = NULL;
+}
+
+SDL_Texture& Elips::GetElips()
+{
+	return *ElipsTexture;
+}
+
+int Elips::SetElips(graphic windows)
+{
+	SetSurface("materials/Elips.bmp");
+	ElipsTexture = SDL_CreateTextureFromSurface(&windows.GetRen(), tempSurface);
+
+	return 0;
+}
+
+Elips::Elips()
+{
+	ElipsTexture = NULL;
+}
+
+SDL_Texture& Diamond::GetDiamond()
+{
+	return *DiamondTexture;
+}
+
+int Diamond::SetDiamond(graphic windows)
+{
+	SetSurface("materials/Diamond.bmp");
+	DiamondTexture = SDL_CreateTextureFromSurface(&windows.GetRen(), tempSurface);
+
+	return 0;
+}
+
+Diamond::Diamond()
+{
+	DiamondTexture = NULL;
+}
+
+int Figure::SelectFigure(int fignum, graphic graphics)
+{
+	switch (fignum)
+	{
+	case POINT:
+		break;
+	case LINE:
+		SetLine(graphics);
+		break;
+	case CIRCLE:
+		SetCircle(graphics);
+		break;
+	case RECT:
+		SetRect(graphics);
+		break;
+	case TRIANGLE:
+		SetTriangle(graphics);
+		break;
+	case ELIPS:
+		SetElips(graphics);
+		break;
+	case DIAMOND:
+		SetDiamond(graphics);
+		break;
+	default:
+		break;
+	}
+	return 0;
+}
+
+SDL_Texture& Figure::GetTexture(int fignum)
+{
+	switch (fignum)
+	{
+	case POINT:
+		break;
+	case LINE:
+		return GetLine();
+	case CIRCLE:
+		return GetCircle();
+	case RECT:
+		return GetRect();
+	case TRIANGLE:
+		return GetTriangle();
+	case ELIPS:
+		return GetElips();
+	case DIAMOND:
+		return GetDiamond();
+	default:
+		break;
+	}
+
+	return GetLine();
 }

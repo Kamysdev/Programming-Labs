@@ -5,17 +5,6 @@ SDL_Window& graphic::GetWindow()
     return *window;
 }
 
-SDL_Surface& graphic::GetSurface()
-{
-    return *surface;
-}
-
-int graphic::AddToSurface(std::string name)
-{
-    surface = SDL_LoadBMP(name.c_str());
-    return 0;
-}
-
 SDL_Renderer& graphic::GetRen()
 {
     return *ren;
@@ -46,8 +35,6 @@ int graphic::init()
         return 3;
     }
     SDL_SetRenderDrawColor(ren, 0xFF, 0xFF, 0xFF, 0xFF);
-
-    surface = SDL_GetWindowSurface(window);
 
     return 0;
 }
