@@ -22,6 +22,8 @@ int main(int argc, char** argv)
 	SDL_Rect dot = { 0, 0, 50, 50 };
 	SDL_Event windowEvent{};
 
+	SDL_RendererFlip flip = SDL_FLIP_HORIZONTAL;
+
 	SFigure fignum = LINE;
 
 	LoadTexture(arr, size, fignum, graphics);
@@ -36,10 +38,17 @@ int main(int argc, char** argv)
 				dot.y = arr[i].GetY();
 				arr[i].LinearMove();
 
-				SDL_RenderCopy(&graphics.GetRen(), &arr[i].GetTexture(fignum), 0, &dot);
+				SDL_RenderCopyEx(&graphics.GetRen(), &arr[i].GetTexture(fignum), NULL, &dot, a, NULL, flip);
+				SDL_RenderPresent(&graphics.GetRen());
+				SDL_RenderClear(&graphics.GetRen());
+
+				if (a > 365)
+				{
+					a = 0;
+				}
+				//SDL_RenderCopy(&graphics.GetRen(), &arr[i].GetTexture(fignum), 0, &dot);
 			}
-			SDL_RenderPresent(&graphics.GetRen());
-			SDL_RenderClear(&graphics.GetRen());
+			
 
 			if (SDL_PollEvent(&windowEvent))
 			{
