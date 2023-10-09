@@ -190,7 +190,7 @@ SDL_Texture& Circle::GetCircle()
 
 SDL_Point& Circle::GetCenter()
 {
-	return centerpos;
+	return* centerpos;
 }
 
 int Circle::SetCircle(graphic windows)
@@ -203,8 +203,9 @@ int Circle::SetCircle(graphic windows)
 
 Circle::Circle()
 {
-	centerpos.x = rand()%25;
-	centerpos.y = 0;
+	centerpos->x = 50;
+	centerpos->y = 0;
+	
 	CircleTexture = NULL;
 }
 
@@ -333,4 +334,12 @@ SDL_Texture& Figure::GetTexture(int fignum)
 	}
 
 	return GetLine();
+}
+
+void LoadTexture(Figure* arr, int size, int fignum, graphic graphics)
+{
+	for (int i = 0; i < size; i++)
+	{
+		arr[i].SelectFigure(fignum, graphics);
+	}
 }

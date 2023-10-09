@@ -1,13 +1,5 @@
 #include "figure.hpp"
 
-void LoadTexture(Figure* arr, int size, int fignum, graphic graphics)
-{
-	for (int i = 0; i < size; i++)
-	{
-		arr[i].SelectFigure(fignum, graphics);
-	}
-}
-
 int main(int argc, char** argv)
 {
 	srand((unsigned int)time(NULL));
@@ -22,20 +14,21 @@ int main(int argc, char** argv)
 	SDL_Rect dot = { 0, 0, 50, 50 };
 	SDL_Event windowEvent{};
 
-	SFigure fignum = CIRCLE;
+	SFigure fignum = DIAMOND;
 
 	LoadTexture(arr, size, fignum, graphics);
 
 	while (error == 0)
 	{
-		if (task == 1)
-		{		
-			for (int i = 0; i < size; i++)
+	
+		for (int i = 0; i < size; i++)
+		{
+			dot.x = arr[i].GetX();
+			dot.y = arr[i].GetY();
+			arr[i].LinearMove();
+
+			if (task == 1)
 			{
-				dot.x = arr[i].GetX();
-				dot.y = arr[i].GetY();
-				arr[i].LinearMove();
-				
 				if (&arr[i].GetCircle() != NULL)
 				{
 					SDL_RenderCopyEx(&graphics.GetRen(),
@@ -44,7 +37,7 @@ int main(int argc, char** argv)
 						&dot,
 						arr[i].Rotation(),
 						&arr[i].GetCenter(),
-						SDL_FLIP_HORIZONTAL);
+						SDL_FLIP_VERTICAL);
 				}
 				else
 				{
@@ -55,26 +48,33 @@ int main(int argc, char** argv)
 						0,
 						SDL_FLIP_HORIZONTAL);
 				}
-				//SDL_RenderCopy(&graphics.GetRen(), &arr[i].GetTexture(fignum), 0, &dot);
 			}
-			SDL_RenderPresent(&graphics.GetRen());
-			SDL_RenderClear(&graphics.GetRen());
-
-			if (SDL_PollEvent(&windowEvent))
+			else
 			{
-				if (windowEvent.type == SDL_QUIT)
-				{
-					break;
-				}
+				SDL_RenderCopy(&graphics.GetRen(), &arr[i].GetTexture(fignum), 0, &dot);
+			}
+		}
+		SDL_RenderPresent(&graphics.GetRen());
+		SDL_RenderClear(&graphics.GetRen());
 
-				switch (windowEvent.key.keysym.sym)
-				{
-				case SDLK_ESCAPE: // Show or hide console
-				{
-					return 0;
-					break;
-				}
-				}
+		if (SDL_PollEvent(&windowEvent))
+		{
+			if (windowEvent.type == SDL_QUIT)
+			{
+				break;
+			}
+
+			switch (windowEvent.key.keysym.sym)
+			{
+			case SDLK_1:
+				task = 1;
+				break;
+			case SDLK_2:
+				task = 0;
+				break;
+			case SDLK_ESCAPE: // Show or hide console
+				return 0;
+				break;
 			}
 		}
 	}

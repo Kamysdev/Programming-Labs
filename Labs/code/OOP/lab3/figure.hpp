@@ -1,6 +1,8 @@
 #pragma once
 #include "../headers/SDL_Init.hpp"
 
+_UCRT_DISABLED_WARNING_4412
+
 enum Direction
 {
 	UPPER_LEFT,
@@ -70,7 +72,7 @@ public:
 	Circle();
 private:
 	SDL_Texture* CircleTexture;
-	SDL_Point centerpos;
+	SDL_Point* centerpos = new SDL_Point;
 };
 
 class Rect : public Circle
@@ -124,3 +126,5 @@ public:
 
 	SDL_Texture& GetTexture(int fignum);
 };
+
+void LoadTexture(Figure* arr, int size, int fignum, graphic graphics);
