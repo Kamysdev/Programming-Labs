@@ -116,6 +116,14 @@ int tPoint::RandMove()
 	return 0;
 }
 
+int tPoint::Rotation()
+{
+	rotationspeed++;
+	if (rotationspeed > 360) rotationspeed = 0;
+
+	return rotationspeed;
+}
+
 int tPoint::SetSurface(std::string locality)
 {
 	tempSurface = SDL_LoadBMP(locality.c_str());
@@ -129,6 +137,7 @@ tPoint::tPoint()
 	randspeed = 1 + rand() % 3;
 	posx = rand() % 1240;
 	posy = rand() % 670;
+	rotationspeed = 1;
 
 	tempSurface = NULL;
 }
@@ -179,6 +188,11 @@ SDL_Texture& Circle::GetCircle()
 	return *CircleTexture;
 }
 
+SDL_Point& Circle::GetCenter()
+{
+	return centerpos;
+}
+
 int Circle::SetCircle(graphic windows)
 {
 	SetSurface("materials/Circle.bmp");
@@ -189,6 +203,8 @@ int Circle::SetCircle(graphic windows)
 
 Circle::Circle()
 {
+	centerpos.x = rand()%25;
+	centerpos.y = 0;
 	CircleTexture = NULL;
 }
 

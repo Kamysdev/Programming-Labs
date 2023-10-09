@@ -30,6 +30,7 @@ public:
 
 	int LinearMove();
 	int RandMove();
+	int Rotation();
 
 	int SetSurface(std::string locality);
 
@@ -43,6 +44,7 @@ private:
 	int randspeed;
 	int posx;
 	int posy;
+	int rotationspeed;
 
 	int SwitchDir();
 };
@@ -62,11 +64,13 @@ class Circle : public Line
 {
 public:
 	SDL_Texture& GetCircle();
+	SDL_Point& GetCenter();
 	int SetCircle(graphic windows);
 
 	Circle();
 private:
 	SDL_Texture* CircleTexture;
+	SDL_Point centerpos;
 };
 
 class Rect : public Circle
