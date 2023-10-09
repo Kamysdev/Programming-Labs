@@ -336,16 +336,13 @@ SDL_Texture& Figure::GetTexture(int fignum)
 	return GetLine();
 }
 
-void LoadTexture(Figure* arr, int size, int fignum, graphic graphics)
+void LoadTexture(FigureArr figure, int size, int fignum, graphic graphics)
 {
 	for (int i = 0; i < size; i++)
 	{
-		arr[i].SelectFigure(fignum, graphics);
+		figure.arr[i].SelectFigure(fignum, graphics);
 	}
 }
 
 tPoint::tPoint(SDL_Surface* tempSurface, int direction, int randspeed, int posx, int posy, int rotationspeed)
-	: tempSurface(tempSurface), direction(direction), randspeed(randspeed), posx(posx), posy(posy), rotationspeed(rotationspeed)
-{
-
-}
+	: tempSurface(tempSurface), direction(direction), randspeed(randspeed), posx(posx), posy(posy), rotationspeed(rotationspeed) { }

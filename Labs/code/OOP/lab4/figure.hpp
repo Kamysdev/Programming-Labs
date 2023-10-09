@@ -27,10 +27,11 @@ class tPoint
 public:
 	int GetX();
 	int GetY();
+	int GetY();
 	int SetX(int temp);
 	int SetY(int temp);
 
-	int LinearMove();
+	virtual int LinearMove();
 	int RandMove();
 	int Rotation();
 
@@ -128,4 +129,10 @@ public:
 	SDL_Texture& GetTexture(int fignum);
 };
 
-void LoadTexture(Figure* arr, int size, int fignum, graphic graphics);
+class FigureArr : public Figure
+{
+public:
+	Figure* arr = new Figure[100];
+};
+
+void LoadTexture(FigureArr figure, int size, int fignum, graphic graphics);
