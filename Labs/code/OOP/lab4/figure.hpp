@@ -27,7 +27,6 @@ class tPoint
 public:
 	int GetX();
 	int GetY();
-	int GetY();
 	int SetX(int temp);
 	int SetY(int temp);
 

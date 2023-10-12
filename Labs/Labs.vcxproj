@@ -267,6 +267,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\..\..\..\Downloads\lab3_siaod.cpp" />
+    <ClCompile Include="..\..\..\..\..\Downloads\lab4_siaod.cpp" />
     <ClCompile Include="code\1 sem\Lab3__.cpp" />
     <ClCompile Include="code\1 sem\Lab5.cpp" />
     <ClCompile Include="code\1 sem\Lab6.cpp" />
@@ -290,15 +292,15 @@
     <ClCompile Include="code\OOP\1lab.cpp" />
     <ClCompile Include="code\OOP\headers\SDL_Init.cpp" />
     <ClCompile Include="code\OOP\lab2.cpp" />
+    <ClCompile Include="code\OOP\lab3\figure.cpp" />
     <ClCompile Include="code\OOP\lab3\lab3.cpp" />
-    <ClCompile Include="code\OOP\lab4\figure.cpp" />
     <ClCompile Include="code\OOP\lab4\lab4 OOP.cpp" />
     <ClCompile Include="code\SAOD\10labsaod.cpp" />
     <ClCompile Include="code\SAOD\13.cpp" />
     <ClCompile Include="code\SAOD\3sem lab0.cpp" />
     <ClCompile Include="code\SAOD\3Sem lab1.cpp" />
-    <ClCompile Include="code\SAOD\3Sem lab2.cpp" />
     <ClCompile Include="code\SAOD\lab2 saod.cpp" />
+    <ClCompile Include="code\SAOD\lab2_1.cpp" />
     <ClCompile Include="code\SAOD\Lab6saod.cpp" />
     <ClCompile Include="code\SAOD\Lab7sa.cpp" />
     <ClCompile Include="code\SAOD\Lab7SAOD.cpp" />
@@ -314,7 +316,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="code\OOP\headers\SDL_Init.hpp" />
-    <ClInclude Include="code\OOP\lab4\figure.hpp" />
+    <ClInclude Include="code\OOP\lab3\figure.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -141,14 +141,20 @@
     <ClCompile Include="code\SAOD\3sem lab0.cpp">
       <Filter>Файлы ресурсов\SAOD</Filter>
     </ClCompile>
-    <ClCompile Include="code\SAOD\3Sem lab2.cpp">
-      <Filter>Файлы ресурсов\SAOD</Filter>
-    </ClCompile>
     <ClCompile Include="code\OOP\lab4\lab4 OOP.cpp">
       <Filter>Файлы ресурсов\OOP</Filter>
     </ClCompile>
-    <ClCompile Include="code\OOP\lab4\figure.cpp">
+    <ClCompile Include="code\OOP\lab3\figure.cpp">
       <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="code\SAOD\lab2_1.cpp">
+      <Filter>Файлы ресурсов\SAOD</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\Downloads\lab4_siaod.cpp">
+      <Filter>Файлы ресурсов\SAOD</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\Downloads\lab3_siaod.cpp">
+      <Filter>Файлы ресурсов\SAOD</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -164,7 +170,7 @@
     <ClInclude Include="code\OOP\headers\SDL_Init.hpp">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="code\OOP\lab4\figure.hpp">
+    <ClInclude Include="code\OOP\lab3\figure.hpp">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>

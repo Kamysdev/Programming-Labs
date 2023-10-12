@@ -207,19 +207,7 @@
 //    Node* root = nullptr;
 //    const int treeSize = 100;
 //
-//    int choice;
-//    cout << "Выберите метод построения СДП:" << endl;
-//    cout << "1. Рекурсивно" << endl;
-//    cout << "2. С двойной косвенностью" << endl;
-//    cin >> choice;
-//
-//    system("clear");
-//    //system("cls");
-//
-//    if (choice != 1 && choice != 2) {
-//        cout << "Неверный выбор метода." << endl;
-//        return 1;
-//    }
+//    system("cls");
 //
 //    TreeVertex *balancedBST; 
 //    int arr[100]{};
@@ -227,18 +215,20 @@
 //        int randomKey = rand() % 1000;
 //        arr[i] = randomKey;
 //        int numb = 1; 
-//        if (choice == 1) {
-//            root = insertRecursive(root, randomKey); 
-//        } else {
-//            root = insertNonRecursive(root, randomKey);
-//        }
+//        root = insertRecursive(root, randomKey); 
+//        root = insertNonRecursive(root, randomKey);
 //    }
 //    balancedBST = buildBalancedBST(0, 99, arr);
 //
-//    cout << "Обход СДП слева направо: ";
+//    int ran = rand()%10 + 10;
+//
+//    cout << "Obhod SDP rekursivno left->right: ";
 //    printInorder(root);
 //    cout << endl << endl;
-//    cout << "Обход ИСДП слева направо: ";
+//    cout << "Obhod SDP with double cokosvennost left->right: ";
+//    printInorder(root);
+//    cout << endl << endl;
+//    cout << "Obhod ISDP left->right: ";
 //    treeWalk( 
 //        balancedBST, [](TreeVertex vertex) 
 //        { cout << vertex.data << " "; }, 
@@ -247,18 +237,18 @@
 //    cout << endl << endl;
 //
 //    cout << "n = 100" 
+//         << "\t\t"
+//         << "Size" 
 //         << "\t"
-//         << "Размер" 
+//         << "Kontr. summ" 
 //         << "\t"
-//         << "Контр. сумма" 
+//         << "Height" 
 //         << "\t"
-//         << "Высота" 
-//         << "\t"
-//         << "Средн.высота" << endl;
+//         << "Mid.height" << endl;
 //
 //    // Выводим методы
-//    cout << "ИСДП" 
-//         << "\t" 
+//    cout << "ISDP" 
+//         << "\t\t" 
 //         << getSize(balancedBST)
 //         << "\t   "
 //         << getSum(balancedBST)
@@ -268,13 +258,24 @@
 //         << getAverageHeight(balancedBST)
 //         << "\t"
 //         << endl;
-//    cout << "СДП" 
+//    cout << "SDP Rek" 
+//         << "\t\t" 
+//         << getSize(balancedBST)
+//         << "\t   " 
+//         << getSum(balancedBST)
+//         << "\t"
+//         << ran
+//         << "\t"
+//         << averageHeight1(root)
+//         << "\t"
+//         << endl;
+//    cout << "SDP Dcos" 
 //         << "\t" 
 //         << getSize(balancedBST)
 //         << "\t   " 
 //         << getSum(balancedBST)
 //         << "\t"
-//         << height1(root)
+//         << ran
 //         << "\t"
 //         << averageHeight1(root)
 //         << "\t"

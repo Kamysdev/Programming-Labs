@@ -16,7 +16,7 @@
 //
 //	tPoint aboba(NULL, LOWER_LEFT, 10, 0, 0, 50);			// Sample of init 
 //
-//	SFigure fignum = DIAMOND;
+//	SFigure fignum = TRIANGLE;
 //
 //	LoadTexture(arr, size, fignum, graphics);
 //
