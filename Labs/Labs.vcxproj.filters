@@ -156,6 +156,12 @@
     <ClCompile Include="..\..\..\..\..\Downloads\lab3_siaod.cpp">
       <Filter>Файлы ресурсов\SAOD</Filter>
     </ClCompile>
+    <ClCompile Include="code\SAOD\lab5 saodik.cpp">
+      <Filter>Файлы ресурсов\SAOD</Filter>
+    </ClCompile>
+    <ClCompile Include="code\SAOD\lab_7.cpp">
+      <Filter>Файлы ресурсов\SAOD</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="code\inform\test.db">
