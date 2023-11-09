@@ -303,6 +303,7 @@
     <ClCompile Include="code\SAOD\lab2_1.cpp" />
     <ClCompile Include="code\SAOD\lab5 saodik.cpp" />
     <ClCompile Include="code\SAOD\Lab6saod.cpp" />
+    <ClCompile Include="code\SAOD\lab7 saod 3 sem.cpp" />
     <ClCompile Include="code\SAOD\Lab7sa.cpp" />
     <ClCompile Include="code\SAOD\Lab7SAOD.cpp" />
     <ClCompile Include="code\SAOD\Lab8saod.cpp" />
@@ -310,6 +311,7 @@
     <ClCompile Include="code\SAOD\lab_7.cpp" />
     <ClCompile Include="code\SAOD\saod5true.cpp" />
     <ClCompile Include="code\Testing\SDL2.cpp" />
+    <ClCompile Include="Source.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="code\inform\movies.db" />
