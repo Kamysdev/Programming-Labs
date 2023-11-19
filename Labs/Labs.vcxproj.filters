@@ -31,6 +31,9 @@
     <Filter Include="Файлы ресурсов\OOP">
       <UniqueIdentifier>{c045c981-c878-418a-8767-1625f890fc7f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Файлы ресурсов\SAOD\Lab9 saod 3sem">
+      <UniqueIdentifier>{c273c218-e0ae-4b2e-8a4d-28c258eb9d27}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="code\1 sem\Lab9.cpp">
@@ -150,12 +153,6 @@
     <ClCompile Include="code\SAOD\lab2_1.cpp">
       <Filter>Файлы ресурсов\SAOD</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\..\Downloads\lab4_siaod.cpp">
-      <Filter>Файлы ресурсов\SAOD</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\..\Downloads\lab3_siaod.cpp">
-      <Filter>Файлы ресурсов\SAOD</Filter>
-    </ClCompile>
     <ClCompile Include="code\SAOD\lab5 saodik.cpp">
       <Filter>Файлы ресурсов\SAOD</Filter>
     </ClCompile>
@@ -167,6 +164,27 @@
     </ClCompile>
     <ClCompile Include="code\SAOD\lab7 saod 3 sem.cpp">
       <Filter>Файлы ресурсов\SAOD</Filter>
+    </ClCompile>
+    <ClCompile Include="code\SAOD\lab4_siaod.cpp">
+      <Filter>Файлы ресурсов\SAOD</Filter>
+    </ClCompile>
+    <ClCompile Include="code\SAOD\lab3_siaod.cpp">
+      <Filter>Файлы ресурсов\SAOD</Filter>
+    </ClCompile>
+    <ClCompile Include="code\SAOD\Lab8 saod 3sem.cpp">
+      <Filter>Файлы ресурсов\SAOD</Filter>
+    </ClCompile>
+    <ClCompile Include="code\SAOD\Lab 9 saod 3 sem.cpp">
+      <Filter>Файлы ресурсов\SAOD\Lab9 saod 3sem</Filter>
+    </ClCompile>
+    <ClCompile Include="code\SAOD\func menu.cpp">
+      <Filter>Файлы ресурсов\SAOD\Lab9 saod 3sem</Filter>
+    </ClCompile>
+    <ClCompile Include="code\SAOD\coding.hpp">
+      <Filter>Файлы ресурсов\SAOD\Lab9 saod 3sem</Filter>
+    </ClCompile>
+    <ClCompile Include="code\SAOD\coding.cpp">
+      <Filter>Файлы ресурсов\SAOD\Lab9 saod 3sem</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -184,6 +202,9 @@
     </ClInclude>
     <ClInclude Include="code\OOP\lab3\figure.hpp">
       <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="code\SAOD\func menu.hpp">
+      <Filter>Файлы ресурсов\SAOD\Lab9 saod 3sem</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
